@@ -73,4 +73,14 @@ main {
 }
 .taskbar__start-button-text {
   font-weight: bold;
+}
+
+/*=============================================
+=            Notepad Selectors                =
+=============================================*/
+.notepad-modal {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=styles.css.map */
