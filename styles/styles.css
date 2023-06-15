@@ -35,7 +35,14 @@ body {
   border: 4px groove;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 3px 5px;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.taskbar__start-button-icon {
+  width: 35%;
+  height: 35%;
 }
 .taskbar__start-button-text {
   font-weight: bold;
