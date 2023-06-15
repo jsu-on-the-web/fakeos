@@ -27,7 +27,6 @@ body {
 =            Taskbar Selectors                =
 =============================================*/
 .taskbar {
-	background-color: c.$taskbar-grey;
+	@include m.taskbar-element;
 	height: 3.2vh;
-	border: 4px groove;
 }
