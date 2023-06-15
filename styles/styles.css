@@ -26,4 +26,17 @@ body {
   background-color: #c0c7c8;
   border: 4px groove;
   height: 3.2vh;
+  display: flex;
+  align-items: center;
+  font-family: "MS Sans Serif", sans-serif;
+}
+.taskbar__start-button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 5px;
+}
+.taskbar__start-button-text {
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

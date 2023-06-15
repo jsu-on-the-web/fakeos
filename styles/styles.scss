@@ -29,4 +29,17 @@ body {
 .taskbar {
 	@include m.taskbar-element;
 	height: 3.2vh;
+	display: flex;
+	align-items: center;
+	font-family: "MS Sans Serif", sans-serif;
+
+	&__start-button {
+		@include m.taskbar-element;
+		width: fit-content;
+		padding: 3px 5px;
+	}
+
+	&__start-button-text {
+		font-weight: bold;
+	}
 }
