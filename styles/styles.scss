@@ -13,6 +13,10 @@ body {
 	height: 100%;
 }
 
+main {
+	font-family: "MS Sans Serif", sans-serif;
+}
+
 /*=============================================
 =               Desktop Selectors             =
 =============================================*/
@@ -36,10 +40,10 @@ body {
 	&__start-button {
 		@include m.taskbar-element;
 		width: fit-content;
-		padding: 2px 5px;
+		padding: 2px 4px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	&__start-button-icon {
