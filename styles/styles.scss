@@ -20,5 +20,14 @@ body {
 .desktop {
 	background-image: url("../img/windows98-background.jpg");
 	background-size: cover;
-	height: 95vh;
+	height: 96vh;
+}
+
+/*=============================================
+=            Taskbar Selectors                =
+=============================================*/
+.taskbar {
+	background-color: c.$taskbar-grey;
+	height: 3.2vh;
+	border: 4px groove;
 }
