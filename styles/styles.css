@@ -83,4 +83,20 @@ main {
   border: 4px groove;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 50vw;
+}
+.notepad-modal__title-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  background: linear-gradient(0.25turn, #030774, #0f7ac6);
+  color: white;
+  display: flex;
+}
+.notepad-modal__menu-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  list-style: none;
+  margin: 0;
 }/*# sourceMappingURL=styles.css.map */

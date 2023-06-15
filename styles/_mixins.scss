@@ -1,6 +1,6 @@
 @use "_colours.scss" as c;
 
 @mixin taskbar-element {
-	background-color: c.$taskbar-grey;
+	background-color: c.$ui-grey;
 	border: 4px groove;
 }
