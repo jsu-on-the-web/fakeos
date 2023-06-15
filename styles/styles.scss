@@ -25,6 +25,36 @@ main {
 	background-image: url("../img/windows98-background.jpg");
 	background-size: cover;
 	height: 96vh;
+
+	&__icons {
+		// display: grid;
+		// grid-template-columns: repeat(10, auto);
+		display: flex;
+		flex: 1 1 0px;
+		width: 0;
+
+		div {
+			padding: 10px;
+			display: flex;
+
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__program-icon {
+		height: 30px;
+		width: 30px;
+	}
+	&__documents &__program-icon {
+		height: 40px;
+		width: 40px;
+	}
+
+	&__program-title {
+		background-color: c.$win9x-teal;
+	}
 }
 
 /*=============================================

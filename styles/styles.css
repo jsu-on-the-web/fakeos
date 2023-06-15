@@ -22,6 +22,29 @@ main {
   background-size: cover;
   height: 96vh;
 }
+.desktop__icons {
+  display: flex;
+  flex: 1 1 0px;
+  width: 0;
+}
+.desktop__icons div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.desktop__program-icon {
+  height: 30px;
+  width: 30px;
+}
+.desktop__documents .desktop__program-icon {
+  height: 40px;
+  width: 40px;
+}
+.desktop__program-title {
+  background-color: #008081;
+}
 
 /*=============================================
 =            Taskbar Selectors                =
