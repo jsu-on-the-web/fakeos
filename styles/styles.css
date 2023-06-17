@@ -120,6 +120,10 @@ main {
 .notepad-modal__menu-bar li {
   padding: 4px;
 }
+.notepad-modal--option-unavailable {
+  color: darkgrey;
+  pointer-events: none;
+}
 .notepad-modal textarea {
   resize: none;
   height: inherit;

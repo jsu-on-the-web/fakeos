@@ -124,6 +124,11 @@ main {
 		}
 	}
 
+	&--option-unavailable {
+		color: darkgrey;
+		pointer-events: none;
+	}
+
 	textarea {
 		resize: none;
 		height: inherit;
