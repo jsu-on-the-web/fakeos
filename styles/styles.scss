@@ -90,6 +90,9 @@ main {
 =============================================*/
 .notepad-modal {
 	@include m.taskbar-element;
+	position: relative;
+	left: 35vw;
+	height: 50vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
@@ -123,5 +126,6 @@ main {
 
 	textarea {
 		resize: none;
+		height: inherit;
 	}
 }

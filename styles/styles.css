@@ -81,6 +81,9 @@ main {
 .notepad-modal {
   background-color: #c0c7c8;
   border: 4px groove;
+  position: relative;
+  left: 35vw;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -119,4 +122,5 @@ main {
 }
 .notepad-modal textarea {
   resize: none;
+  height: inherit;
 }/*# sourceMappingURL=styles.css.map */
