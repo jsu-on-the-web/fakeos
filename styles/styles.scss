@@ -129,6 +129,17 @@ main {
 		pointer-events: none;
 	}
 
+	&--maximized {
+		background-color: #c0c7c8;
+		border: 4px groove;
+		position: relative;
+		top: -11vh;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+
 	textarea {
 		resize: none;
 		height: inherit;
