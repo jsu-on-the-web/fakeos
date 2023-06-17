@@ -9,8 +9,5 @@
 	@include taskbar-element;
 	background: linear-gradient(0.25turn, #030774, #0f7ac6);
 	display: flex;
-
-	__title {
-		color: white;
-	}
+	justify-content: space-between;
 }

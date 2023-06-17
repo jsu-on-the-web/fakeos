@@ -93,15 +93,30 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-
-	width: 50vw;
+	width: 30vw;
 	&__title-bar {
 		@include m.program-title-bar;
 	}
+	&__title {
+		color: white;
+		margin-left: 10px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
 	&__menu-bar {
 		@include m.taskbar-element;
 		display: flex;
 		list-style: none;
 		margin: 0;
+		padding-left: 5px;
+
+		li {
+			padding: 4px;
+		}
+	}
+
+	textarea {
+		resize: none;
 	}
 }

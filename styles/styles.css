@@ -84,16 +84,20 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 50vw;
+  width: 30vw;
 }
 .notepad-modal__title-bar {
   background-color: #c0c7c8;
   border: 4px groove;
   background: linear-gradient(0.25turn, #030774, #0f7ac6);
   display: flex;
+  justify-content: space-between;
 }
-.notepad-modal__title-bar __title {
+.notepad-modal__title {
   color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .notepad-modal__menu-bar {
   background-color: #c0c7c8;
@@ -101,4 +105,11 @@ main {
   display: flex;
   list-style: none;
   margin: 0;
+  padding-left: 5px;
+}
+.notepad-modal__menu-bar li {
+  padding: 4px;
+}
+.notepad-modal textarea {
+  resize: none;
 }/*# sourceMappingURL=styles.css.map */
