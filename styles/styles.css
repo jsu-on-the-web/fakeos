@@ -90,8 +90,10 @@ main {
   background-color: #c0c7c8;
   border: 4px groove;
   background: linear-gradient(0.25turn, #030774, #0f7ac6);
-  color: white;
   display: flex;
+}
+.notepad-modal__title-bar __title {
+  color: white;
 }
 .notepad-modal__menu-bar {
   background-color: #c0c7c8;

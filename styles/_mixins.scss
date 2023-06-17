@@ -4,3 +4,13 @@
 	background-color: c.$ui-grey;
 	border: 4px groove;
 }
+
+@mixin program-title-bar {
+	@include taskbar-element;
+	background: linear-gradient(0.25turn, #030774, #0f7ac6);
+	display: flex;
+
+	__title {
+		color: white;
+	}
+}

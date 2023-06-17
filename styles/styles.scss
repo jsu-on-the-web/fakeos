@@ -96,10 +96,7 @@ main {
 
 	width: 50vw;
 	&__title-bar {
-		@include m.taskbar-element;
-		background: linear-gradient(0.25turn, #030774, #0f7ac6);
-		color: white;
-		display: flex;
+		@include m.program-title-bar;
 	}
 	&__menu-bar {
 		@include m.taskbar-element;
