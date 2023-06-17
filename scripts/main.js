@@ -12,6 +12,13 @@ import { toggleNotepadSize, notepadModal } from "./notepad";
 
 /*----------  Variable Declaration  ----------*/
 
+// An object to represent what programs are currently open
+let openPrograms = {
+    notepadOpen: false,
+    documentsOpen: false,
+    ircOpen: false
+}
+
 
 /*----------  Script assignment  ----------*/
 
