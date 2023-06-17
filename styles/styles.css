@@ -134,6 +134,10 @@ main {
   flex-direction: column;
   justify-content: flex-start;
 }
+.notepad-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
+}
 .notepad-modal textarea {
   resize: none;
   height: inherit;

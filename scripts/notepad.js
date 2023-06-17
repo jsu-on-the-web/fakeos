@@ -1,5 +1,5 @@
 /*----------  Function Declaration  ----------*/
-const toggleNotepadSize = (event) => {
+export const toggleNotepadSize = (event) => {
     if (notepadModal.classList.contains('notepad-modal--maximized')) {
         notepadModal.classList.remove('notepad-modal--maximized');
         notepadModal.classList.add('notepad-modal');
@@ -17,9 +17,9 @@ const toggleNotepadSize = (event) => {
 
 /*----------  Variable Declaration  ----------*/
 
-let notepadModal = document.getElementsByClassName("notepad-modal").item(0);
-let notepadExpandButton = document.getElementsByClassName("notepad-modal__expand-button").item(0);
-let notepadEntry = document.querySelector("#notepad-note");
+export let notepadModal = document.getElementsByClassName("notepad-modal").item(0);
+export let notepadExpandButton = document.getElementsByClassName("notepad-modal__expand-button").item(0);
+export let notepadEntry = document.querySelector("#notepad-note");
 
 
 /*----------  Script assignment  ----------*/
