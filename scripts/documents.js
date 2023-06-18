@@ -11,8 +11,8 @@ class file {
     fileContents = '';
 
     constructor(newName, newContents) {
-        fileName = newName;
-        fileContents = newContents;
+        this.fileName = newName;
+        this.fileContents = newContents;
     }
 
     get fileName() {
