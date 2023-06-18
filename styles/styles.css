@@ -177,4 +177,16 @@ main {
   background-color: white;
   min-height: 30rem;
   margin: 0.5rem;
+  padding: 1.5rem;
+}
+.documents-modal__display-file-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 2rem;
+}
+.documents-modal__file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
 }/*# sourceMappingURL=styles.css.map */
