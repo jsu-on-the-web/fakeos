@@ -141,4 +141,40 @@ main {
 .notepad-modal textarea {
   resize: none;
   height: inherit;
+}
+
+/*=============================================
+=            Document Selectors            =
+=============================================*/
+.documents-modal {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: relative;
+  left: 35vw;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30rem;
+}
+.documents-modal__title-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  background: linear-gradient(0.25turn, #030774, #0f7ac6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+.documents-modal__title {
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.documents-modal__display {
+  background-color: white;
+  min-height: 30rem;
+  margin: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */
