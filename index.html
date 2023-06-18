@@ -30,7 +30,7 @@
             </section>
 
             <!-- Modals for the programs-->
-            <section class="notepad-modal">
+            <section class="notepad-modal--inactive">
                 <div class="notepad-modal__title-bar">
                     <p class="notepad-modal__title">Untitled - Notepad</p>
                     <section class="notepad-modal__buttons">
@@ -48,6 +48,25 @@
                     <li class="notepad-modal__menu-bar-help">Help</li>
                 </ul>
                 <textarea name="note" id="notepad-note" cols="50" rows="10"></textarea>
+            </section>
+
+            <section class="documents-modal">
+                <div class="documents-modal__title-bar">
+                    <p class="documents-modal__title">Documents</p>
+                    <section class="documents-modal__buttons">
+                        <button class="documents-modal__mini-button">
+                            <i class="fa fas fa-window-minimize"></i>
+                        </button>
+                        <button class="documents-modal__expand-button"><i class="fa fa-window-maximize"></i></button>
+                        <button class="documents-modal__close-button ">X</button>
+                    </section>
+                </div>
+                <ul class="documents-modal__menu-bar">
+                    <li class="documents-modal__menu-bar-file">File</li>
+                    <li class="documents-modal__menu-bar-edit documents-modal--option-unavailable">Edit</li>
+                    <li class="documents-modal__menu-bar-search documents-modal--option-unavailable">Search</li>
+                    <li class="documents-modal__menu-bar-help">Help</li>
+                </ul>
             </section>
         </section>
 
