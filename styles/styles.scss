@@ -190,4 +190,8 @@ main {
 		align-items: center;
 		color: black;
 	}
+	&--inactive {
+		opacity: 0;
+		pointer-events: none;
+	}
 }
