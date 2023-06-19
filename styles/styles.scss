@@ -90,7 +90,7 @@ main {
 =============================================*/
 .notepad-modal {
 	@include m.taskbar-element;
-	position: relative;
+	position: absolute;
 	left: 35vw;
 	height: 50vh;
 	display: flex;
@@ -153,7 +153,7 @@ main {
 =============================================*/
 .documents-modal {
 	@include m.taskbar-element;
-	position: relative;
+	position: absolute;
 	left: 35vw;
 	height: max-content;
 	display: flex;
@@ -193,5 +193,39 @@ main {
 	&--inactive {
 		opacity: 0;
 		pointer-events: none;
+	}
+}
+
+/*=============================================
+=            IRC Selectors            =
+=============================================*/
+
+.irc-modal {
+	@include m.taskbar-element;
+	position: absolute;
+	left: 35vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 30vw;
+	&__title-bar {
+		@include m.program-title-bar;
+	}
+	&__title {
+		@include m.program-title-text;
+	}
+
+	&__buttons button {
+		@include m.taskbar-element;
+		font-size: 8pt;
+	}
+	&__display {
+		background-color: white;
+		min-height: 30rem;
+		height: inherit;
+		margin: 0.5rem;
+
+		padding: 1rem;
 	}
 }
