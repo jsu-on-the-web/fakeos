@@ -20,3 +20,9 @@
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
+@mixin program-subwindow {
+	background-color: white;
+	margin: 0.5rem;
+	border: 4px groove;
+}

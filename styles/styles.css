@@ -203,11 +203,13 @@ main {
   border: 4px groove;
   position: absolute;
   left: 35vw;
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 30vw;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .irc-modal__title-bar {
   background-color: #c0c7c8;
@@ -230,9 +232,33 @@ main {
   font-size: 8pt;
 }
 .irc-modal__display {
-  background-color: white;
   min-height: 30rem;
   height: inherit;
   margin: 0.5rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.irc-modal__chat-window {
+  display: grid;
+  grid-template-columns: 30rem 10rem;
+}
+.irc-modal__chat {
+  background-color: white;
+  margin: 0.5rem;
+  border: 4px groove;
+  height: 34rem;
+}
+.irc-modal__member-list {
+  background-color: white;
+  margin: 0.5rem;
+  border: 4px groove;
+}
+.irc-modal__chat-input {
+  width: 34.9rem;
+  border: 4px groove;
+}
+.irc-modal__chat-button {
+  border: 4px groove;
 }/*# sourceMappingURL=styles.css.map */
