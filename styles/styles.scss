@@ -100,8 +100,17 @@ main {
 	}
 
 	&__menu-items {
-		margin-right: 6rem;
 		padding-left: 1rem;
+		margin-bottom: 0;
+		div {
+			display: flex;
+			padding-right: 4rem;
+		}
+	}
+
+	&__shut-down {
+		border-top: groove 4px;
+		width: max-content;
 	}
 }
 

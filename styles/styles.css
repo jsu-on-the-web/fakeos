@@ -90,8 +90,17 @@ main {
   height: max-content;
 }
 .taskbar__menu-items {
-  margin-right: 6rem;
   padding-left: 1rem;
+  margin-bottom: 0;
+}
+.taskbar__menu-items div {
+  display: flex;
+  padding-right: 4rem;
+}
+.taskbar__shut-down {
+  border-top: groove 4px;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 /*=============================================
