@@ -48,3 +48,5 @@ let intervalID = setInterval(du.updateText, 5000, calculateCurrentTime(), clockT
 if (notepadModal.classList.contains("notepad-modal--inactive")) {
     console.log("Notepad inactive");
 }
+
+du.updateText(calculateCurrentTime(), clockText);
