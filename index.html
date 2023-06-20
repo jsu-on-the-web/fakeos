@@ -30,7 +30,7 @@
             </section>
 
             <!-- Modals for the programs-->
-            <section class="notepad-modal--inactive">
+            <section class="notepad-modal notepad-modal--inactive">
                 <div class="notepad-modal__title-bar">
                     <p class="notepad-modal__title">Untitled - Notepad</p>
                     <section class="notepad-modal__buttons">
@@ -50,7 +50,7 @@
                 <textarea name="note" id="notepad-note" cols="50" rows="10"></textarea>
             </section>
 
-            <section class="documents-modal--inactive">
+            <section class="documents-modal documents-modal--inactive">
                 <div class="documents-modal__title-bar">
                     <p class="documents-modal__title">Documents</p>
                     <section class="documents-modal__buttons">
@@ -77,7 +77,7 @@
                 </section>
 
             </section>
-            <section class="irc-modal">
+            <section class="irc-modal irc-modal--inactive">
                 <div class="irc-modal__title-bar">
                     <p class="irc-modal__title">Internet Relay Chat - fauxnet.net - #chat</p>
                     <section class="irc-modal__buttons">
@@ -120,8 +120,10 @@
     </main>
 </body>
 <script src="https://kit.fontawesome.com/d3ac8f356b.js" crossorigin="anonymous"></script>
-<script src="scripts/notepad.js"></script>
-<script src="scripts/documents.js"></script>
+<script src="scripts/notepad.js" type="module"></script>
+<script src="scripts/documents.js" type="module"></script>
+<script src="scripts/irc.js" type="module"></script>
+<script src="scripts/main.js" type="module"></script>
 
 </html>
 

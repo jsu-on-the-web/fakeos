@@ -1,6 +1,7 @@
 
 /*----------  Imports  ----------*/
-import { toggleNotepadSize, notepadModal } from "./notepad";
+import * as notepad from "./notepad.js";
+import * as documents from "./documents.js";
 
 
 
@@ -19,6 +20,7 @@ let openPrograms = {
     ircOpen: false
 }
 
+let notepadModal = notepad.notepadModal;
 
 /*----------  Script assignment  ----------*/
 
