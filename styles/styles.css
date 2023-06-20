@@ -75,6 +75,24 @@ main {
 .taskbar__start-button-text {
   font-weight: bold;
 }
+.taskbar__menu {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  align-items: baseline;
+}
+.taskbar .taskbar__title-bar {
+  background-color: darkgrey;
+  transform: rotate(270deg);
+  display: flex;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+}
+.taskbar__menu-items {
+  margin-right: 6rem;
+  padding-left: 1rem;
+}
 
 /*=============================================
 =            Notepad Selectors                =

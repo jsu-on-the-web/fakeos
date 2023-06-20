@@ -84,6 +84,25 @@ main {
 	&__start-button-text {
 		font-weight: bold;
 	}
+
+	&__menu {
+		@include m.taskbar-element;
+		display: flex;
+		align-items: baseline;
+	}
+
+	.taskbar__title-bar {
+		background-color: darkgrey;
+		transform: rotate(270deg);
+		display: flex;
+		align-items: center;
+		height: max-content;
+	}
+
+	&__menu-items {
+		margin-right: 6rem;
+		padding-left: 1rem;
+	}
 }
 
 /*=============================================
