@@ -243,6 +243,11 @@ main {
 		@include m.program-subwindow;
 	}
 
+	&__member-name {
+		list-style: none;
+		font-weight: bold;
+	}
+
 	&__chat-input {
 		width: 34.9rem;
 		border: 4px groove;

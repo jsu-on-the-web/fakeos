@@ -250,10 +250,14 @@ main {
   border: 4px groove;
   height: 34rem;
 }
-.irc-modal__member-list {
+.irc-modal__member-list-display {
   background-color: white;
   margin: 0.5rem;
   border: 4px groove;
+}
+.irc-modal__member-name {
+  list-style: none;
+  font-weight: bold;
 }
 .irc-modal__chat-input {
   width: 34.9rem;
