@@ -78,8 +78,13 @@ main {
 .taskbar__menu {
   background-color: #c0c7c8;
   border: 4px groove;
+  border-right: black groove 4px;
+  border-bottom: black groove 4px;
+  position: fixed;
+  bottom: 3rem;
   display: flex;
   align-items: baseline;
+  flex-direction: row;
 }
 .taskbar .taskbar__title-bar {
   background-color: darkgrey;
