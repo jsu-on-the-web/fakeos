@@ -2,6 +2,7 @@
 /*----------  Imports  ----------*/
 import * as notepad from "./notepad.js";
 import * as documents from "./documents.js";
+import * as du from "./domUtils.js";
 
 
 
@@ -38,7 +39,7 @@ let timeCalculate = new Date();
 
 let notepadModal = notepad.notepadModal;
 let taskbar = document.querySelector('.taskbar');
-let clock = document.querySelector('.taskbar__clock');
+let clockText = document.querySelector('.taskbar__clock-text');
 
 /*----------  Script assignment  ----------*/
 
@@ -46,7 +47,4 @@ if (notepadModal.classList.contains("notepad-modal--inactive")) {
     console.log("Notepad inactive");
 }
 
-clock.addEventListener("load", () => {
-    calculateCurrentTime();
-});
-
+window.onload(du.updateText(calculateCurrentTime(), clockText))
