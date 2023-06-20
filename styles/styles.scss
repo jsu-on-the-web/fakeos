@@ -62,7 +62,7 @@ main {
 =============================================*/
 .taskbar {
 	@include m.taskbar-element;
-	height: 3.2vh;
+	height: 3.4vh;
 	display: flex;
 	align-items: center;
 	font-family: "MS Sans Serif", sans-serif;
