@@ -122,8 +122,9 @@ main {
 
 	/*----------  Clock  ----------*/
 	&__clock {
-		@include m.taskbar-element;
+		border: 4px ridge;
 		margin-right: 1rem;
+		height: fit-content;
 	}
 }
 

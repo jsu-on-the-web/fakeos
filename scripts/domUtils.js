@@ -1,6 +1,6 @@
 /*----------  Function Declaration  ----------*/
 
-const updateText = (newText, elemToUpdate) => {
+export const updateText = (newText, elemToUpdate) => {
     elemToUpdate.innerText = newText;
 }
 
