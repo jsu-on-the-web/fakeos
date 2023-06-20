@@ -56,6 +56,9 @@ main {
   display: flex;
   align-items: center;
   font-family: "MS Sans Serif", sans-serif;
+  justify-content: space-between;
+  /*----------  Menu  ----------*/
+  /*----------  Clock  ----------*/
 }
 .taskbar__start-button {
   background-color: #c0c7c8;
@@ -106,6 +109,11 @@ main {
   border-top: groove 4px;
   width: -moz-max-content;
   width: max-content;
+}
+.taskbar__clock {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  margin-right: 1rem;
 }
 
 /*=============================================

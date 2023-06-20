@@ -66,6 +66,7 @@ main {
 	display: flex;
 	align-items: center;
 	font-family: "MS Sans Serif", sans-serif;
+	justify-content: space-between;
 
 	&__start-button {
 		@include m.taskbar-element;
@@ -85,6 +86,7 @@ main {
 		font-weight: bold;
 	}
 
+	/*----------  Menu  ----------*/
 	&__menu {
 		@include m.taskbar-element;
 		border-right: black groove 4px;
@@ -116,6 +118,12 @@ main {
 	&__shut-down {
 		border-top: groove 4px;
 		width: max-content;
+	}
+
+	/*----------  Clock  ----------*/
+	&__clock {
+		@include m.taskbar-element;
+		margin-right: 1rem;
 	}
 }
 
