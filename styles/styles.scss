@@ -70,10 +70,11 @@ main {
 	&__start-button {
 		@include m.taskbar-element;
 		width: fit-content;
-		padding: 2px 4px;
+		padding: 4px 4px;
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		margin-left: 0.5rem;
 	}
 
 	&__start-button-icon {
@@ -138,14 +139,15 @@ main {
 		justify-content: flex-start;
 	}
 
-	&--inactive {
-		opacity: 0;
-		pointer-events: none;
-	}
-
 	textarea {
 		resize: none;
 		height: inherit;
+	}
+
+	/*----------  States  ----------*/
+	&--inactive {
+		opacity: 0;
+		pointer-events: none;
 	}
 }
 
@@ -173,6 +175,11 @@ main {
 		@include m.program-title-text;
 	}
 
+	&__buttons button {
+		@include m.taskbar-element;
+		font-size: 8pt;
+	}
+
 	&__display {
 		background-color: white;
 		min-height: 30rem;
@@ -194,6 +201,8 @@ main {
 		align-items: center;
 		color: black;
 	}
+
+	/*----------  States  ----------*/
 	&--inactive {
 		opacity: 0;
 		pointer-events: none;
@@ -260,5 +269,12 @@ main {
 	}
 	&__chat-button {
 		border: 4px groove;
+	}
+
+	/*----------  States  ----------*/
+
+	&--inactive {
+		opacity: 0;
+		pointer-events: none;
 	}
 }

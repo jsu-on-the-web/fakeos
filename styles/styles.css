@@ -62,10 +62,11 @@ main {
   border: 4px groove;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 2px 4px;
+  padding: 4px 4px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  margin-left: 0.5rem;
 }
 .taskbar__start-button-icon {
   width: 35%;
@@ -89,6 +90,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   width: 30vw;
+  /*----------  States  ----------*/
 }
 .notepad-modal__title-bar {
   background-color: #c0c7c8;
@@ -135,13 +137,13 @@ main {
   flex-direction: column;
   justify-content: flex-start;
 }
-.notepad-modal--inactive {
-  opacity: 0;
-  pointer-events: none;
-}
 .notepad-modal textarea {
   resize: none;
   height: inherit;
+}
+.notepad-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
 }
 
 /*=============================================
@@ -159,6 +161,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   width: 30rem;
+  /*----------  States  ----------*/
 }
 .documents-modal__title-bar {
   background-color: #c0c7c8;
@@ -174,6 +177,11 @@ main {
   margin-left: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+.documents-modal__buttons button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  font-size: 8pt;
 }
 .documents-modal__display {
   background-color: white;
@@ -213,6 +221,7 @@ main {
   justify-content: flex-start;
   width: -moz-fit-content;
   width: fit-content;
+  /*----------  States  ----------*/
 }
 .irc-modal__title-bar {
   background-color: #c0c7c8;
@@ -268,4 +277,8 @@ main {
 }
 .irc-modal__chat-button {
   border: 4px groove;
+}
+.irc-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
 }/*# sourceMappingURL=styles.css.map */
