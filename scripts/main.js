@@ -41,9 +41,10 @@ let notepadModal = notepad.notepadModal;
 let taskbar = document.querySelector('.taskbar');
 let clockText = document.querySelector('.taskbar__clock-text');
 
+let intervalID = setInterval(du.updateText, 5000, calculateCurrentTime(), clockText);
+
 /*----------  Script assignment  ----------*/
 
 if (notepadModal.classList.contains("notepad-modal--inactive")) {
     console.log("Notepad inactive");
 }
-du.updateText(calculateCurrentTime(), clockText);

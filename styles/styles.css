@@ -116,6 +116,9 @@ main {
   height: -moz-fit-content;
   height: fit-content;
 }
+.taskbar__clock-text {
+  margin: 0.4rem;
+}
 
 /*=============================================
 =            Notepad Selectors                =
