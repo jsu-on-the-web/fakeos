@@ -81,8 +81,9 @@ main {
 .notepad-modal {
   background-color: #c0c7c8;
   border: 4px groove;
-  position: absolute;
-  left: 35vw;
+  position: fixed;
+  left: 32vw;
+  top: 20vh;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -149,8 +150,9 @@ main {
 .documents-modal {
   background-color: #c0c7c8;
   border: 4px groove;
-  position: absolute;
-  left: 35vw;
+  position: fixed;
+  left: 15vw;
+  top: 20vh;
   height: -moz-max-content;
   height: max-content;
   display: flex;
@@ -201,8 +203,9 @@ main {
 .irc-modal {
   background-color: #c0c7c8;
   border: 4px groove;
-  position: absolute;
-  left: 35vw;
+  position: fixed;
+  left: 63vw;
+  top: 20vh;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;

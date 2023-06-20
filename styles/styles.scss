@@ -90,8 +90,9 @@ main {
 =============================================*/
 .notepad-modal {
 	@include m.taskbar-element;
-	position: absolute;
-	left: 35vw;
+	position: fixed;
+	left: 32vw;
+	top: 20vh;
 	height: 50vh;
 	display: flex;
 	flex-direction: column;
@@ -151,10 +152,13 @@ main {
 /*=============================================
 =            Document Selectors            =
 =============================================*/
+
 .documents-modal {
 	@include m.taskbar-element;
-	position: absolute;
-	left: 35vw;
+	position: fixed;
+	left: 15vw;
+	top: 20vh;
+	height: -moz-max-content;
 	height: max-content;
 	display: flex;
 	flex-direction: column;
@@ -203,7 +207,7 @@ main {
 .irc-modal {
 	@include m.taskbar-element;
 	position: fixed;
-	left: 35vw;
+	left: 63vw;
 	top: 20vh;
 
 	height: fit-content;
