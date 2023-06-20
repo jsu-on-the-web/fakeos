@@ -202,8 +202,10 @@ main {
 
 .irc-modal {
 	@include m.taskbar-element;
-	position: absolute;
+	position: fixed;
 	left: 35vw;
+	top: 20vh;
+
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
