@@ -327,6 +327,12 @@ main {
   background-color: white;
   margin: 0.5rem;
   border: 4px groove;
+  width: -moz-max-content;
+  width: max-content;
+}
+.irc-modal__member-list {
+  padding: 1rem;
+  padding-top: 0.2rem;
 }
 .irc-modal__member-name {
   list-style: none;

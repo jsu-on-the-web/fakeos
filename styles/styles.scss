@@ -306,10 +306,16 @@ main {
 	}
 	&__member-list-display {
 		@include m.program-subwindow;
+		width: max-content;
 	}
 
+	&__member-list {
+		padding: 1rem;
+		padding-top: 0.2rem;
+	}
 	&__member-name {
 		list-style: none;
+
 		font-weight: bold;
 	}
 
