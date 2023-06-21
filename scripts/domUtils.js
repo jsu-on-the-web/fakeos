@@ -2,7 +2,7 @@
 
 export const updateText = (newText, elemToUpdate) => {
     elemToUpdate.innerText = newText;
-    console.log(`Updated text in ${elemToUpdate} to ${newText}`);
+    //console.log(`Updated text in ${elemToUpdate} to ${newText}`);
 }
 
 

@@ -26,7 +26,7 @@ const calculateCurrentTime = () => {
 
     currentTime += hours + ':' + minutes + amOrPm;
 
-    console.log(currentTime);
+    // console.log(currentTime);
 
     return currentTime;
 }
@@ -69,10 +69,6 @@ let ircCloseButton = irc.ircCloseButton;
 /*=============================================
 =            Script Assignment                =
 =============================================*/
-
-if (notepadModal.classList.contains("notepad-modal--inactive")) {
-    console.log("Notepad inactive");
-}
 
 du.updateText(calculateCurrentTime(), clockText);
 startMenu.classList.add("taskbar__menu--inactive");
