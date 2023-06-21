@@ -324,6 +324,7 @@ main {
   margin: 0.5rem;
   border: 4px groove;
   height: 34rem;
+  overflow: auto;
   list-style: none;
   padding-left: 1rem;
   padding-top: 0.5rem;

@@ -87,13 +87,32 @@ let randomMessages = [
     "just came across a really interesting article on this subreddit i'm on, highly recommend, pm me for link",
     "just made myself a cup of coffee, ready to chat :)",
     "=]",
-    "(´･ω･`)?"
+    "(´･ω･`)?",
+    "im starting to think i spend more time chatting online than i do in real life",
+    "i love this channel, you guys always have the best conversations",
+    "love me a good old existential crisis first thing in the morning",
+    "does anyone else feel like we just talk in circles and never actually reply to each other"
 ]
+
+// let randomDelays = [
+//     1000,
+//     1500,
+//     2000,
+//     2500,
+//     3000,
+//     3500,
+//     4000,
+//     4500,
+//     5000
+// ]
 
 export let ircModal = document.querySelector(".irc-modal");
 export let ircCloseButton = document.querySelector(".irc-modal__close-button");
 export let ircChatLog = document.querySelector(".irc-modal__chat");
 
+let messageInterval = setInterval(() => {
+    addChatMessage(selectAtRandom(memberNameList), selectAtRandom(randomMessages));
+}, 2500);
 
 /*----------  Script assignment  ----------*/
 
@@ -104,5 +123,9 @@ memberNameList.forEach(name => {
     memberList.appendChild(nameToPush);
 });
 
-addChatMessage(selectAtRandom(memberNameList), selectAtRandom(randomMessages));
+// IDEA: Post random messages from random members to make the chat seem alive
+
+
+
+
 

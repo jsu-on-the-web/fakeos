@@ -305,6 +305,7 @@ main {
 	&__chat {
 		@include m.program-subwindow;
 		height: 34rem;
+		overflow: auto;
 		list-style: none;
 		padding-left: 1rem;
 		padding-top: 0.5rem;
