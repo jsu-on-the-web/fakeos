@@ -17,6 +17,7 @@ export const toggleNotepadSize = (event) => {
 
 export const notepadModal = document.getElementsByClassName("notepad-modal").item(0);
 export let notepadExpandButton = document.getElementsByClassName("notepad-modal__expand-button").item(0);
+export let notepadCloseButton = document.querySelector(".notepad-modal__close-button");
 export let notepadEntry = document.querySelector("#notepad-note");
 
 

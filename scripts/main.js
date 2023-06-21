@@ -1,14 +1,17 @@
 
-/*----------  Imports  ----------*/
+/*=============================================
+=            Imports                          =
+=============================================*/
+
 import * as notepad from "./notepad.js";
 import * as documents from "./documents.js";
 import * as irc from "./irc.js";
 import * as du from "./domUtils.js";
 
 
-
-
-/*----------  Function Declaration  ----------*/
+/*=============================================
+=            Function Declaration            =
+=============================================*/
 
 const calculateCurrentTime = () => {
     let timeCalculate = new Date();
@@ -30,7 +33,9 @@ const calculateCurrentTime = () => {
 
 
 
-/*----------  Variable Declaration  ----------*/
+/*=============================================
+=            Variable Declaration                =
+=============================================*/
 
 // An object to represent what programs are currently open
 let openPrograms = {
@@ -57,8 +62,13 @@ let notepadProgram = document.querySelector('.desktop__notepad');
 let ircProgram = document.querySelector('.desktop__irc');
 
 let documentsCloseButton = documents.documentsCloseButton;
+let notepadCloseButton = notepad.notepadCloseButton;
+let ircCloseButton = irc.ircCloseButton;
 
-/*----------  Script assignment  ----------*/
+
+/*=============================================
+=            Script Assignment                =
+=============================================*/
 
 if (notepadModal.classList.contains("notepad-modal--inactive")) {
     console.log("Notepad inactive");
@@ -91,5 +101,50 @@ documentsCloseButton.addEventListener("click", (event) => {
         console.log("closing documents");
         openPrograms.documentsOpen = false;
         documentsModal.classList.add('documents-modal--inactive');
+    }
+});
+
+notepadProgram.addEventListener("click", (event) => {
+    if (openPrograms.notepadOpen === false) {
+        console.log("opening notepad");
+        openPrograms.notepadOpen = true;
+        notepadModal.classList.remove('notepad-modal--inactive');
+    }
+});
+notepadCloseButton.addEventListener("click", (event) => {
+    if (openPrograms.notepadOpen === true) {
+        console.log("closing notepad");
+        openPrograms.notepadOpen = false;
+        notepadModal.classList.add('notepad-modal--inactive');
+    }
+});
+
+notepadProgram.addEventListener("click", (event) => {
+    if (openPrograms.notepadOpen === false) {
+        console.log("opening notepad");
+        openPrograms.notepadOpen = true;
+        notepadModal.classList.remove('notepad-modal--inactive');
+    }
+});
+notepadCloseButton.addEventListener("click", (event) => {
+    if (openPrograms.notepadOpen === true) {
+        console.log("closing notepad");
+        openPrograms.notepadOpen = false;
+        notepadModal.classList.add('notepad-modal--inactive');
+    }
+});
+
+ircProgram.addEventListener("click", (event) => {
+    if (openPrograms.ircOpen === false) {
+        console.log("opening irc");
+        openPrograms.ircOpen = true;
+        ircModal.classList.remove('irc-modal--inactive');
+    }
+});
+ircCloseButton.addEventListener("click", (event) => {
+    if (openPrograms.ircOpen === true) {
+        console.log("closing irc");
+        openPrograms.ircOpen = false;
+        ircModal.classList.add('irc-modal--inactive');
     }
 });

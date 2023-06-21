@@ -10,6 +10,8 @@ let memberList = document.querySelector(".irc-modal__member-list");
 
 export let ircModal = document.querySelector(".irc-modal");
 
+export let ircCloseButton = document.querySelector(".irc-modal__close-button");
+
 
 /*----------  Script assignment  ----------*/
 
