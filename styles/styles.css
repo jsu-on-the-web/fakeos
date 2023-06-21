@@ -327,6 +327,7 @@ main {
   overflow: auto;
   list-style: none;
   padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 0.5rem;
 }
 .irc-modal__chat-author {

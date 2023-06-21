@@ -26,11 +26,18 @@ const greetUser = (event, userMessage) => {
         case 'good afternoon':
         case 'gm':
         case 'howdy':
-            let greeterNumber = selectAtRandom(memberNameList);
+            let greeterNumber = Math.floor(Math.random() * memberNameList.length);
+            console.log("time to greet!");
             for (let i = 0; i < greeterNumber; i++) {
-                setTimeout(() => { addChatMessage(selectAtRandom(memberNameList), selectAtRandom(greetings)) }, 2000);
-            }
+                setTimeout(() => {
+                    let author = selectAtRandom(memberNameList);
+                    if (author !== 'windauxs9x') {
+                        addChatMessage(author, selectAtRandom(greetings));
+                    }
 
+                }, 2000);
+            }
+            break;
     }
 }
 
@@ -154,6 +161,8 @@ ircChatSubmit.addEventListener('click', (event) => {
     let message = document.querySelector(".irc-modal__chat-input").value;
     addChatMessage("windauxs9x", message);
     greetUser(event, message);
+    document.querySelector(".irc-modal__chat-input").value = '';
+
 });
 // IDEA: Post random messages from random members to make the chat seem alive
 
