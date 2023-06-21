@@ -36,7 +36,7 @@ const selectAtRandom = (arrayToSelectFrom) => {
 /*----------  Variable Declaration  ----------*/
 
 let memberNameList = [
-    "windeaux9x",
+    "windauxs9x",
     "DardiveN",
     "rKstorTiCKsuN",
     "CLIpANoWSTe",
@@ -111,7 +111,13 @@ export let ircCloseButton = document.querySelector(".irc-modal__close-button");
 export let ircChatLog = document.querySelector(".irc-modal__chat");
 
 let messageInterval = setInterval(() => {
-    addChatMessage(selectAtRandom(memberNameList), selectAtRandom(randomMessages));
+    let author = selectAtRandom(memberNameList);
+
+    // The user is windauxs9x so we can't have that username sending random messages
+    if (author != "windauxs9x") {
+        addChatMessage(author, selectAtRandom(randomMessages));
+    }
+
 }, 2500);
 
 /*----------  Script assignment  ----------*/
