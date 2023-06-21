@@ -26,3 +26,13 @@
 	margin: 0.5rem;
 	border: 4px groove;
 }
+
+@mixin start-button {
+	@include taskbar-element;
+	width: fit-content;
+	padding: 4px 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 0.5rem;
+}

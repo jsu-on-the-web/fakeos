@@ -71,6 +71,19 @@ main {
   justify-content: space-around;
   margin-left: 0.5rem;
 }
+.taskbar__start-button--pressed {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.5rem;
+  background-color: darkgrey;
+  border: 4px ridge rgb(139, 138, 138);
+}
 .taskbar__start-button-icon {
   width: 35%;
   height: 35%;
@@ -88,6 +101,10 @@ main {
   display: flex;
   align-items: baseline;
   flex-direction: row;
+}
+.taskbar__menu--inactive {
+  opacity: 0;
+  pointer-events: none;
 }
 .taskbar .taskbar__title-bar {
   background-color: darkgrey;

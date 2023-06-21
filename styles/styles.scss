@@ -69,13 +69,12 @@ main {
 	justify-content: space-between;
 
 	&__start-button {
-		@include m.taskbar-element;
-		width: fit-content;
-		padding: 4px 4px;
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		margin-left: 0.5rem;
+		@include m.start-button;
+		&--pressed {
+			@include m.start-button;
+			background-color: darkgrey;
+			border: 4px ridge rgb(139, 138, 138);
+		}
 	}
 
 	&__start-button-icon {
@@ -96,6 +95,11 @@ main {
 		display: flex;
 		align-items: baseline;
 		flex-direction: row;
+
+		&--inactive {
+			opacity: 0;
+			pointer-events: none;
+		}
 	}
 
 	.taskbar__title-bar {

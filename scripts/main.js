@@ -42,6 +42,9 @@ let notepadModal = notepad.notepadModal;
 let documentsModal = documents.documentsModal;
 
 let taskbar = document.querySelector('.taskbar');
+let startMenu = document.querySelector('.taskbar__menu');
+let startButton = document.querySelector('.taskbar__start-button');
+
 let clockText = document.querySelector('.taskbar__clock-text');
 let intervalID = setInterval(() => {
     du.updateText(calculateCurrentTime(), clockText);
@@ -58,7 +61,18 @@ if (notepadModal.classList.contains("notepad-modal--inactive")) {
 }
 
 du.updateText(calculateCurrentTime(), clockText);
+startMenu.classList.add("taskbar__menu--inactive");
 
+
+startButton.addEventListener("click", (event) => {
+    if (startMenu.classList.contains("taskbar__menu--inactive")) {
+        startMenu.classList.remove("taskbar__menu--inactive");
+        startButton.classList.add("taskbar__start-button--pressed");
+    } else {
+        startMenu.classList.add("taskbar__menu--inactive");
+        startButton.classList.remove("taskbar__start-button--pressed");
+    }
+})
 
 // Opening each program 
 documentsProgram.addEventListener("click", (event) => {
