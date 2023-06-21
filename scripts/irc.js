@@ -15,6 +15,25 @@ const addChatMessage = (author, newMessage) => {
     ircChatLog.appendChild(messageToInsert);
 }
 
+const greetUser = (event, userMessage) => {
+    const punctuationRegex = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/;
+    const spaceRegex = /\s+/g;
+
+    switch (userMessage.toLowerCase().replace(punctuationRegex, '').replace(spaceRegex, ' ')) {
+        case 'hi':
+        case 'hello':
+        case 'good morning':
+        case 'good afternoon':
+        case 'gm':
+        case 'howdy':
+            let greeterNumber = selectAtRandom(memberNameList);
+            for (let i = 0; i < greeterNumber; i++) {
+                setTimeout(() => { addChatMessage(selectAtRandom(memberNameList), selectAtRandom(greetings)) }, 2000);
+            }
+
+    }
+}
+
 const selectAtRandom = (arrayToSelectFrom) => {
     if (arrayToSelectFrom !== undefined || arrayToSelectFrom.length !== 0) {
         return arrayToSelectFrom[Math.floor(Math.random() * arrayToSelectFrom.length)];
@@ -109,6 +128,7 @@ let randomMessages = [
 export let ircModal = document.querySelector(".irc-modal");
 export let ircCloseButton = document.querySelector(".irc-modal__close-button");
 export let ircChatLog = document.querySelector(".irc-modal__chat");
+export let ircChatSubmit = document.querySelector(".irc-modal__chat-button");
 
 let messageInterval = setInterval(() => {
     let author = selectAtRandom(memberNameList);
@@ -129,6 +149,12 @@ memberNameList.forEach(name => {
     memberList.appendChild(nameToPush);
 });
 
+ircChatSubmit.addEventListener('click', (event) => {
+    event.preventDefault();
+    let message = document.querySelector(".irc-modal__chat-input").value;
+    addChatMessage("windauxs9x", message);
+    greetUser(event, message);
+});
 // IDEA: Post random messages from random members to make the chat seem alive
 
 
