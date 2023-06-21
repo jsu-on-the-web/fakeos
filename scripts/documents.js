@@ -56,7 +56,9 @@ class file {
 }
 let testFile = new file('test1.txt', 'This is a test file');
 
-export let documentsModal = document.querySelector('.documentsModal');
+export let documentsModal = document.querySelector('.documents-modal');
+export let documentsCloseButton = document.querySelector('.documents-modal__close-button');
+
 export let files = document.querySelectorAll('.documents-modal__file');
 export let documentsDisplayList = document.querySelector('.documents-modal__display-file-list');
 export let filesContentList = [testFile];

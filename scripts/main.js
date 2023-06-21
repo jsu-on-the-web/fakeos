@@ -2,6 +2,7 @@
 /*----------  Imports  ----------*/
 import * as notepad from "./notepad.js";
 import * as documents from "./documents.js";
+import * as irc from "./irc.js";
 import * as du from "./domUtils.js";
 
 
@@ -40,6 +41,7 @@ let openPrograms = {
 
 let notepadModal = notepad.notepadModal;
 let documentsModal = documents.documentsModal;
+let ircModal = irc.ircModal;
 
 let taskbar = document.querySelector('.taskbar');
 let startMenu = document.querySelector('.taskbar__menu');
@@ -53,6 +55,8 @@ let intervalID = setInterval(() => {
 let documentsProgram = document.querySelector('.desktop__documents');
 let notepadProgram = document.querySelector('.desktop__notepad');
 let ircProgram = document.querySelector('.desktop__irc');
+
+let documentsCloseButton = documents.documentsCloseButton;
 
 /*----------  Script assignment  ----------*/
 
@@ -77,7 +81,15 @@ startButton.addEventListener("click", (event) => {
 // Opening each program 
 documentsProgram.addEventListener("click", (event) => {
     if (openPrograms.documentsOpen === false) {
+        console.log("opening documents");
         openPrograms.documentsOpen = true;
-        documentsModal.classList.remove("documents-modal--inactive");
+        documentsModal.classList.remove('documents-modal--inactive');
     }
 })
+documentsCloseButton.addEventListener("click", (event) => {
+    if (openPrograms.documentsOpen === true) {
+        console.log("closing documents");
+        openPrograms.documentsOpen = false;
+        documentsModal.classList.add('documents-modal--inactive');
+    }
+});
