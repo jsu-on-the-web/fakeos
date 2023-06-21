@@ -295,6 +295,8 @@ main {
 		flex-direction: column;
 	}
 
+	/*----------  Chat  ----------*/
+
 	&__chat-window {
 		display: grid;
 		grid-template-columns: 30rem 10rem;
@@ -303,7 +305,17 @@ main {
 	&__chat {
 		@include m.program-subwindow;
 		height: 34rem;
+		list-style: none;
+		padding-left: 1rem;
+		padding-top: 0.5rem;
 	}
+
+	&__chat-author {
+		font-weight: bold;
+	}
+
+	/*----------  Member list  ----------*/
+
 	&__member-list-display {
 		@include m.program-subwindow;
 		width: max-content;
@@ -315,7 +327,6 @@ main {
 	}
 	&__member-name {
 		list-style: none;
-
 		font-weight: bold;
 	}
 

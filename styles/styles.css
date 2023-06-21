@@ -282,6 +282,8 @@ main {
   justify-content: flex-start;
   width: -moz-fit-content;
   width: fit-content;
+  /*----------  Chat  ----------*/
+  /*----------  Member list  ----------*/
   /*----------  States  ----------*/
 }
 .irc-modal__title-bar {
@@ -322,6 +324,12 @@ main {
   margin: 0.5rem;
   border: 4px groove;
   height: 34rem;
+  list-style: none;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+}
+.irc-modal__chat-author {
+  font-weight: bold;
 }
 .irc-modal__member-list-display {
   background-color: white;
