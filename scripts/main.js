@@ -10,6 +10,7 @@ import * as du from "./domUtils.js";
 /*----------  Function Declaration  ----------*/
 
 const calculateCurrentTime = () => {
+    let timeCalculate = new Date();
     let currentTime = "";
 
     let hours = timeCalculate.getHours() > 12 ? timeCalculate.getHours() - 12 : timeCalculate.getHours();
@@ -20,6 +21,8 @@ const calculateCurrentTime = () => {
     let amOrPm = timeCalculate.getHours() < 12 ? 'AM' : 'PM';
 
     currentTime += hours + ':' + minutes + amOrPm;
+
+    console.log(currentTime);
 
     return currentTime;
 }
@@ -35,14 +38,14 @@ let openPrograms = {
     ircOpen: false
 }
 
-let timeCalculate = new Date();
-
 let notepadModal = notepad.notepadModal;
 let documentsModal = documents.documentsModal;
 
 let taskbar = document.querySelector('.taskbar');
 let clockText = document.querySelector('.taskbar__clock-text');
-let intervalID = setInterval(du.updateText, 5000, calculateCurrentTime(), clockText);
+let intervalID = setInterval(() => {
+    du.updateText(calculateCurrentTime(), clockText);
+}, 5000);
 
 let documentsProgram = document.querySelector('.desktop__documents');
 let notepadProgram = document.querySelector('.desktop__notepad');
