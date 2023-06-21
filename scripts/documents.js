@@ -1,6 +1,6 @@
 /*----------  Function Declaration  ----------*/
 
-const updateFileDisplay = () => {
+export const updateFileDisplay = () => {
     filesContentList.forEach(file => {
         // Spawn and add a file icon to the display
 
@@ -56,9 +56,10 @@ class file {
 }
 let testFile = new file('test1.txt', 'This is a test file');
 
-let files = document.querySelectorAll('.documents-modal__file');
-let documentsDisplayList = document.querySelector('.documents-modal__display-file-list');
-let filesContentList = [testFile];
+export let documentsModal = document.querySelector('.documentsModal');
+export let files = document.querySelectorAll('.documents-modal__file');
+export let documentsDisplayList = document.querySelector('.documents-modal__display-file-list');
+export let filesContentList = [testFile];
 
 /*----------  Script assignment  ----------*/
 

@@ -38,10 +38,15 @@ let openPrograms = {
 let timeCalculate = new Date();
 
 let notepadModal = notepad.notepadModal;
+let documentsModal = documents.documentsModal;
+
 let taskbar = document.querySelector('.taskbar');
 let clockText = document.querySelector('.taskbar__clock-text');
-
 let intervalID = setInterval(du.updateText, 5000, calculateCurrentTime(), clockText);
+
+let documentsProgram = document.querySelector('.desktop__documents');
+let notepadProgram = document.querySelector('.desktop__notepad');
+let ircProgram = document.querySelector('.desktop__irc');
 
 /*----------  Script assignment  ----------*/
 
@@ -50,3 +55,12 @@ if (notepadModal.classList.contains("notepad-modal--inactive")) {
 }
 
 du.updateText(calculateCurrentTime(), clockText);
+
+
+// Opening each program 
+documentsProgram.addEventListener("click", (event) => {
+    if (openPrograms.documentsOpen === false) {
+        openPrograms.documentsOpen = true;
+        documentsModal.classList.remove("documents-modal--inactive");
+    }
+})
