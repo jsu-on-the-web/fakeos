@@ -2,7 +2,23 @@
 
 const addChatMessage = (author, newMessage) => { }
 
-const randomGreeting = (event) => { }
+const selectAtRandom = (arrayToSelectFrom) => {
+    if (arrayToSelectFrom !== undefined || arrayToSelectFrom.length !== 0) {
+        return arrayToSelectFrom[Math.floor(Math.random() * arrayToSelectFrom.length)];
+    }
+}
+
+// const randomGreeting = (event) => {
+//     return greetings[Math.floor(Math.random() * greetings.length)];
+// }
+
+// const randomMessage = (event) => {
+//     return randomMessage[Math.floor(Math.random() * randomMessages.length)];
+// }
+
+// const randomAuthor = (event) => {
+//     return memberList[Math.floor(Math.random() * memberList.length)];
+// }
 
 /*----------  Variable Declaration  ----------*/
 
