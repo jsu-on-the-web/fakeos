@@ -40,6 +40,8 @@ main {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+
+			@include m.clickable-option;
 		}
 	}
 
@@ -158,6 +160,7 @@ main {
 
 	&__buttons button {
 		@include m.taskbar-element;
+		@include m.clickable-option;
 		font-size: 8pt;
 	}
 
@@ -185,6 +188,10 @@ main {
 		}
 	}
 
+	&__menu-bar-file {
+		@include m.clickable-option;
+	}
+
 	&__file-menu {
 		@include m.taskbar-element;
 		position: fixed;
@@ -196,8 +203,11 @@ main {
 		list-style: none;
 		user-select: none;
 		pointer-events: all;
-		li > span {
-			margin-left: 2.5rem;
+		li {
+			@include m.clickable-option;
+			span {
+				margin-left: 2.5rem;
+			}
 		}
 	}
 
@@ -245,6 +255,7 @@ main {
 
 	&__buttons button {
 		@include m.taskbar-element;
+		@include m.clickable-option;
 		font-size: 8pt;
 	}
 
@@ -301,6 +312,7 @@ main {
 
 	&__buttons button {
 		@include m.taskbar-element;
+		@include m.clickable-option;
 		font-size: 8pt;
 	}
 	&__display {
@@ -356,6 +368,7 @@ main {
 	}
 	&__chat-button {
 		border: 4px groove;
+		@include m.clickable-option;
 	}
 
 	/*----------  States  ----------*/

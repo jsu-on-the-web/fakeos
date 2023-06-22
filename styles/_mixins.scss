@@ -36,3 +36,9 @@
 	justify-content: space-around;
 	margin-left: 0.5rem;
 }
+
+@mixin clickable-option {
+	pointer-events: all;
+	user-select: none;
+	cursor: pointer;
+}

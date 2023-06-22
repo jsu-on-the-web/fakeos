@@ -28,7 +28,7 @@ export const saveFile = (event) => {
         const matchIndex = filesContentList.findIndex(file => file.fileName == newFileName);
         if (matchIndex === -1) {
             filesContentList.push(newFile);
-            console.log(`Added file %{newFileName}`);
+            console.log(`Added file ${newFileName}`);
 
         } else {
             filesContentList[matchIndex] = newFile;
@@ -49,8 +49,14 @@ export const fileNameEntry = (event) => {
     } else {
         return newFileName;
     }
+}
 
-
+export const toggleMenu = (event, menuTarget) => {
+    if (!(menuTarget.classList.contains("notepad-modal--inactive"))) {
+        menuTarget.classList.add("notepad-modal--inactive");
+    } else {
+        menuTarget.classList.remove("notepad-modal--inactive");
+    }
 }
 /*----------  Variable Declaration  ----------*/
 
@@ -58,6 +64,9 @@ export const notepadModal = document.getElementsByClassName("notepad-modal").ite
 export let notepadExpandButton = document.getElementsByClassName("notepad-modal__expand-button").item(0);
 export let notepadCloseButton = document.querySelector(".notepad-modal__close-button");
 export let notepadEntry = document.querySelector("#notepad-note");
+
+export let notepadFileTab = document.querySelector(".notepad-modal__menu-bar-file");
+export let notepadFileMenu = document.querySelector(".notepad-modal__file-menu");
 export let notepadSave = document.querySelector(".notepad-modal__file-menu-save");
 
 /*----------  Script assignment  ----------*/
@@ -67,6 +76,10 @@ export let notepadSave = document.querySelector(".notepad-modal__file-menu-save"
 
 notepadSave.addEventListener("click", (event) => {
     saveFile(event);
+});
+
+notepadFileTab.addEventListener("click", (event) => {
+    toggleMenu(event, notepadFileMenu);
 });
 
 console.log(filesContentList);

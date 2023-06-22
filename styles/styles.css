@@ -33,6 +33,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 .desktop__program-icon {
   height: 30px;
@@ -172,6 +177,11 @@ main {
 .notepad-modal__buttons button {
   background-color: #c0c7c8;
   border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
   font-size: 8pt;
 }
 .notepad-modal--option-unavailable {
@@ -193,6 +203,13 @@ main {
 .notepad-modal__menu-bar li {
   padding: 4px;
 }
+.notepad-modal__menu-bar-file {
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
 .notepad-modal__file-menu {
   background-color: #c0c7c8;
   border: 4px groove;
@@ -208,7 +225,14 @@ main {
           user-select: none;
   pointer-events: all;
 }
-.notepad-modal__file-menu-options li > span {
+.notepad-modal__file-menu-options li {
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.notepad-modal__file-menu-options li span {
   margin-left: 2.5rem;
 }
 .notepad-modal--inactive {
@@ -251,6 +275,11 @@ main {
 .documents-modal__buttons button {
   background-color: #c0c7c8;
   border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
   font-size: 8pt;
 }
 .documents-modal__display {
@@ -313,6 +342,11 @@ main {
 .irc-modal__buttons button {
   background-color: #c0c7c8;
   border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
   font-size: 8pt;
 }
 .irc-modal__display {
@@ -363,6 +397,11 @@ main {
 }
 .irc-modal__chat-button {
   border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 .irc-modal--inactive {
   opacity: 0;
