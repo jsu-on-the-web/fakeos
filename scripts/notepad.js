@@ -113,6 +113,7 @@ notepadExit.addEventListener("click", (event) => {
     if (openPrograms.notepadOpen === true || !(notepad.notepadModal.classList.contains('notepad-modal--inactive'))) {
         console.log("closing notepad");
         openPrograms.notepadOpen = false;
+        toggleMenu(event, notepadFileMenu);
         notepadModal.classList.add('notepad-modal--inactive');
         closeTaskTab(event, 'Notepad');
     }
