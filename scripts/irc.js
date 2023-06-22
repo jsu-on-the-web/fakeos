@@ -68,7 +68,15 @@ let memberNameList = [
     "CLIpANoWSTe",
     "rChAR",
     "ladja1982",
-    "Xx_oneou_xX"
+    "Xx_oneou_xX",
+    "hunter2",
+    "Wiz",
+    "Ooola",
+    "bov1ne",
+    "gloria1010",
+    "teco",
+    "murb",
+    "CERBERUS"
 ];
 let memberList = document.querySelector(".irc-modal__member-list");
 
@@ -117,7 +125,14 @@ let randomMessages = [
     "im starting to think i spend more time chatting online than i do in real life",
     "i love this channel, you guys always have the best conversations",
     "love me a good old existential crisis first thing in the morning",
-    "does anyone else feel like we just talk in circles and never actually reply to each other"
+    "does anyone else feel like we just talk in circles and never actually reply to each other",
+    "i am once again asking for your financial support",
+    "this is fine",
+    "im baby",
+    "aight imma head out",
+    "where's the lie?",
+    "weird flex but ok",
+    "it's too damn early for this"
 ]
 
 // let randomDelays = [
