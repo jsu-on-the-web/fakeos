@@ -18,8 +18,10 @@ export const saveFile = (event) => {
 
     if (newFileName === "") {
         console.error("File name invalid!");
+        alert("File name invalid! File not saved!");
         return;
     } else {
+        newFileName += ".txt";
         let newFile = new textFile(newFileName, notepadEntry.value);
 
         // If a file with the same name already exists, replace it with the new file
@@ -42,10 +44,10 @@ export const fileNameEntry = (event) => {
     const WHITESPACE_ONLY = /^\s*$/;
     let newFileName = prompt('Enter a file name');
 
-    if (newFileName !== '' || newFileName.match(INVALID_CHARACTERS || newFileName.match(WHITESPACE_ONLY))) {
-        return newFileName;
-    } else {
+    if (newFileName === '' || newFileName.match(INVALID_CHARACTERS || newFileName.match(WHITESPACE_ONLY))) {
         return "";
+    } else {
+        return newFileName;
     }
 
 
