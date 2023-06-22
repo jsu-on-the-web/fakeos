@@ -25,6 +25,10 @@ const greetUser = (event, userMessage) => {
         case 'good morning':
         case 'good afternoon':
         case 'gm':
+        case 'yo':
+        case 'sup':
+        case 'heya':
+        case 'hey':
         case 'howdy':
             let greeterNumber = Math.floor(Math.random() * memberNameList.length);
             console.log("time to greet!");
@@ -88,7 +92,12 @@ let greetings = [
     "welcome back!",
     "wb",
     "（＾∀＾●）ﾉｼ",
-    "(｡･∀･)ﾉﾞ"
+    "(｡･∀･)ﾉﾞ",
+    "hi",
+    "hey",
+    "sup",
+    "heya",
+    "yo"
 ]
 
 let randomMessages = [
