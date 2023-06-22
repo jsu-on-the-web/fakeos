@@ -197,12 +197,16 @@ main {
   background-color: #c0c7c8;
   border: 4px groove;
   position: fixed;
-  top: 22rem;
+  top: 21rem;
   padding-right: 2rem;
   width: auto;
 }
 .notepad-modal__file-menu-options {
   list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: all;
 }
 .notepad-modal__file-menu-options li > span {
   margin-left: 2.5rem;
@@ -210,16 +214,6 @@ main {
 .notepad-modal--inactive {
   opacity: 0;
   pointer-events: none;
-}
-.notepad-modal--maximized {
-  background-color: #c0c7c8;
-  border: 4px groove;
-  position: relative;
-  top: -11vh;
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
 }
 
 /*=============================================

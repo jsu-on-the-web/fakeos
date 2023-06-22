@@ -22,9 +22,9 @@ export let notepadEntry = document.querySelector("#notepad-note");
 
 
 /*----------  Script assignment  ----------*/
-notepadExpandButton.addEventListener("click", (event) => {
-    toggleNotepadSize(event);
-});
+// notepadExpandButton.addEventListener("click", (event) => {
+//     toggleNotepadSize(event);
+// });
 
 
 
