@@ -26,6 +26,9 @@ export const updateFileDisplay = () => {
     })
 }
 
+export const openFile = (fileName) => {
+
+}
 
 /*----------  Variable Declaration  ----------*/
 
