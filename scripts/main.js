@@ -49,12 +49,12 @@ const spawnTaskTab = (event, programName) => {
             break;
         case 'Notepad':
             newTabIcon.src = "../img/notepad.ico";
-            newTabTitle.innerText = notepad.notepadTitle;
+            newTabTitle.innerText = 'Notepad';
             newTab.id = 'Notepad';
             break;
         case 'IRC':
             newTabIcon.src = "../img/network_three_pcs.ico";
-            newTabTitle.innerText = 'Internet Relay Chat - fauxnet.net - #chat';
+            newTabTitle.innerText = 'IRC';
             newTab.id = 'IRC';
             break;
         default:
@@ -70,7 +70,13 @@ const spawnTaskTab = (event, programName) => {
 
 }
 
-
+const closeTaskTab = (event, programName) => {
+    try {
+        tasksList.removeChild(document.querySelector(`#${programName}`));
+    } catch (error) {
+        console.error(error);
+    }
+}
 
 /*=============================================
 =            Variable Declaration                =
@@ -129,6 +135,7 @@ documentsProgram.addEventListener("click", (event) => {
     if (openPrograms.documentsOpen === false) {
         console.log("opening documents");
         openPrograms.documentsOpen = true;
+        spawnTaskTab(event, 'Documents');
         documentsModal.classList.remove('documents-modal--inactive');
     }
 })
@@ -137,6 +144,7 @@ documentsCloseButton.addEventListener("click", (event) => {
         console.log("closing documents");
         openPrograms.documentsOpen = false;
         documentsModal.classList.add('documents-modal--inactive');
+        closeTaskTab(event, 'Documents');
     }
 });
 
@@ -145,6 +153,7 @@ notepadProgram.addEventListener("click", (event) => {
         console.log("opening notepad");
         openPrograms.notepadOpen = true;
         notepadModal.classList.remove('notepad-modal--inactive');
+        spawnTaskTab(event, 'Notepad');
     }
 });
 notepadCloseButton.addEventListener("click", (event) => {
@@ -152,6 +161,7 @@ notepadCloseButton.addEventListener("click", (event) => {
         console.log("closing notepad");
         openPrograms.notepadOpen = false;
         notepadModal.classList.add('notepad-modal--inactive');
+        closeTaskTab(event, 'Notepad');
     }
 });
 
@@ -161,6 +171,7 @@ ircProgram.addEventListener("click", (event) => {
         console.log("opening irc");
         openPrograms.ircOpen = true;
         ircModal.classList.remove('irc-modal--inactive');
+        spawnTaskTab(event, 'IRC');
     }
 });
 ircCloseButton.addEventListener("click", (event) => {
@@ -168,7 +179,7 @@ ircCloseButton.addEventListener("click", (event) => {
         console.log("closing irc");
         openPrograms.ircOpen = false;
         ircModal.classList.add('irc-modal--inactive');
+        closeTaskTab(event, 'IRC');
     }
 });
 
-spawnTaskTab(event, 'Documents');
