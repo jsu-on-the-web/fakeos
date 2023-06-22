@@ -108,27 +108,13 @@ notepadProgram.addEventListener("click", (event) => {
     }
 });
 notepadCloseButton.addEventListener("click", (event) => {
-    if (openPrograms.notepadOpen === true) {
+    if (openPrograms.notepadOpen === true || !(notepad.notepadModal.classList.contains('notepad-modal--inactive'))) {
         console.log("closing notepad");
         openPrograms.notepadOpen = false;
         notepadModal.classList.add('notepad-modal--inactive');
     }
 });
 
-notepadProgram.addEventListener("click", (event) => {
-    if (openPrograms.notepadOpen === false) {
-        console.log("opening notepad");
-        openPrograms.notepadOpen = true;
-        notepadModal.classList.remove('notepad-modal--inactive');
-    }
-});
-notepadCloseButton.addEventListener("click", (event) => {
-    if (openPrograms.notepadOpen === true) {
-        console.log("closing notepad");
-        openPrograms.notepadOpen = false;
-        notepadModal.classList.add('notepad-modal--inactive');
-    }
-});
 
 ircProgram.addEventListener("click", (event) => {
     if (openPrograms.ircOpen === false) {

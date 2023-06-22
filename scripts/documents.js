@@ -43,6 +43,7 @@ export const openFile = (requestedFileName) => {
         notepad.notepadEntry.value = fileContents;
 
         notepad.notepadModal.classList.remove('notepad-modal--inactive');
+        notepad.notepadFileMenu.classList.add('notepad-modal--inactive');
     } else {
         console.error("File not found!");
         return;
