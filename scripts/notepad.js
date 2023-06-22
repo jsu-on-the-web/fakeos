@@ -1,6 +1,7 @@
 import { updateFileDisplay, textFile, filesContentList } from "./documents.js";
 
 /*----------  Function Declaration  ----------*/
+// TODO: Until the modal can resize properly, this method goes unused
 export const toggleNotepadSize = (event) => {
     if (notepadModal.classList.contains('notepad-modal--maximized')) {
         notepadModal.classList.remove('notepad-modal--maximized');
@@ -37,6 +38,7 @@ export const saveFile = (event) => {
         }
     }
     updateFileDisplay();
+    toggleMenu(event, notepadFileMenu);
     console.log(filesContentList);
 }
 
@@ -92,9 +94,18 @@ notepadFileTab.addEventListener("click", (event) => {
     toggleMenu(event, notepadFileMenu);
 });
 
+notepadEntry.addEventListener("click", (event) => {
+
+    if (!(notepadFileMenu.classList.contains("notepad-modal--inactive"))) {
+        toggleMenu(event, notepadFileMenu);
+    }
+
+});
+
 notepadNew.addEventListener("click", (event) => {
     notepadTitle.innerHTML = "Untitled - Notepad";
     notepadEntry.value = '';
+    toggleMenu(event, notepadFileMenu);
 })
 
 console.log(filesContentList);
