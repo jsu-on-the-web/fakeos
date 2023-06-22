@@ -126,6 +126,27 @@ main {
 		width: max-content;
 	}
 
+	/*----------  Task list  ----------*/
+
+	&__task-list {
+		display: flex;
+		flex-grow: 1;
+	}
+	&__task {
+		@include m.taskbar-element;
+		display: flex;
+		align-items: center;
+		flex-basis: 8rem;
+		flex-shrink: 1;
+	}
+	&__task-icon {
+		width: 15%;
+		margin-left: 0.4rem;
+		margin-right: 0.7rem;
+		margin-top: 0.2rem;
+		margin-bottom: 0.2rem;
+	}
+
 	/*----------  Clock  ----------*/
 	&__clock {
 		border: 4px ridge;

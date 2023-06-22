@@ -63,6 +63,7 @@ main {
   font-family: "MS Sans Serif", sans-serif;
   justify-content: space-between;
   /*----------  Menu  ----------*/
+  /*----------  Task list  ----------*/
   /*----------  Clock  ----------*/
 }
 .taskbar__start-button {
@@ -131,6 +132,25 @@ main {
   border-top: groove 4px;
   width: -moz-max-content;
   width: max-content;
+}
+.taskbar__task-list {
+  display: flex;
+  flex-grow: 1;
+}
+.taskbar__task {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  align-items: center;
+  flex-basis: 8rem;
+  flex-shrink: 1;
+}
+.taskbar__task-icon {
+  width: 15%;
+  margin-left: 0.4rem;
+  margin-right: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 .taskbar__clock {
   border: 4px ridge;
