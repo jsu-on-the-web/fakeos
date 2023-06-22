@@ -105,20 +105,32 @@ main {
   position: fixed;
   bottom: 3rem;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-direction: row;
 }
 .taskbar__menu--inactive {
   opacity: 0;
   pointer-events: none;
 }
-.taskbar .taskbar__title-bar {
-  background-color: darkgrey;
-  transform: rotate(270deg);
+.taskbar__title-bar {
+  background-color: #85888f;
   display: flex;
-  align-items: center;
-  height: -moz-max-content;
-  height: max-content;
+  align-items: flex-end;
+  height: 23rem;
+  width: 2.3rem;
+  padding-bottom: 1rem;
+}
+.taskbar__title {
+  padding-bottom: 6rem;
+  font-size: x-large;
+  color: #c3c6cd;
+  display: flex;
+  transform: rotate(270deg);
+  font-weight: bold;
+  font-family: "Tahoma", "MS Sans Serif" sans-serif;
+}
+.taskbar__title-number {
+  color: white;
 }
 .taskbar__menu-items {
   padding-left: 1rem;
@@ -154,8 +166,8 @@ main {
 }
 .taskbar__clock {
   border: 4px ridge;
-  border-top: 2px solid hsl(222, 4.3%, 54.1%);
-  border-left: 2px solid hsl(222, 4.3%, 54.1%);
+  border-top: 2px solid #85888f;
+  border-left: 2px solid #85888f;
   margin-right: 1rem;
   height: -moz-fit-content;
   height: fit-content;
