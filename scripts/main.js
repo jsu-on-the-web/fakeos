@@ -183,3 +183,9 @@ ircCloseButton.addEventListener("click", (event) => {
     }
 });
 
+document.querySelector('.desktop').addEventListener("click", (event) => {
+    if (!(startMenu.classList.contains('taskbar__menu--inactive'))) {
+        startMenu.classList.add("taskbar__menu--inactive");
+        startButton.classList.remove("taskbar__start-button--pressed");
+    }
+});
