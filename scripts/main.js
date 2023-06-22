@@ -38,7 +38,7 @@ const calculateCurrentTime = () => {
 =============================================*/
 
 // An object to represent what programs are currently open
-let openPrograms = {
+export let openPrograms = {
     notepadOpen: false,
     documentsOpen: false,
     ircOpen: false

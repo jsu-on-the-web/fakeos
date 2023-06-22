@@ -172,6 +172,7 @@ main {
 	textarea {
 		resize: none;
 		height: inherit;
+		pointer-events: all;
 	}
 
 	/*----------  Menu  ----------*/
@@ -205,9 +206,14 @@ main {
 		pointer-events: all;
 		li {
 			@include m.clickable-option;
+
 			span {
 				margin-left: 2.5rem;
 			}
+		}
+		.--inactive {
+			cursor: none;
+			pointer-events: none;
 		}
 	}
 
@@ -215,6 +221,7 @@ main {
 	&--inactive {
 		opacity: 0;
 		pointer-events: none;
+		cursor: default;
 	}
 
 	// &--maximized {

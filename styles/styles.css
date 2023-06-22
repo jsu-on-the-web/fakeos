@@ -191,6 +191,7 @@ main {
 .notepad-modal textarea {
   resize: none;
   height: inherit;
+  pointer-events: all;
 }
 .notepad-modal__menu-bar {
   background-color: #c0c7c8;
@@ -235,9 +236,14 @@ main {
 .notepad-modal__file-menu-options li span {
   margin-left: 2.5rem;
 }
+.notepad-modal__file-menu-options .--inactive {
+  cursor: none;
+  pointer-events: none;
+}
 .notepad-modal--inactive {
   opacity: 0;
   pointer-events: none;
+  cursor: default;
 }
 
 /*=============================================

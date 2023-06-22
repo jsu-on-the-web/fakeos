@@ -21,6 +21,7 @@ export const saveFile = (event) => {
         alert("File name invalid! File not saved!");
         return;
     } else {
+        notepadTitle.innerHTML = newFileName + ' - Notepad';
         newFileName += ".txt";
         let newFile = new textFile(newFileName, notepadEntry.value);
 
@@ -54,8 +55,14 @@ export const fileNameEntry = (event) => {
 export const toggleMenu = (event, menuTarget) => {
     if (!(menuTarget.classList.contains("notepad-modal--inactive"))) {
         menuTarget.classList.add("notepad-modal--inactive");
+        notepadNew.classList.add("--inactive");
+        notepadSave.classList.add("--inactive");
+        notepadExit.classList.add("--inactive");
     } else {
         menuTarget.classList.remove("notepad-modal--inactive");
+        notepadNew.classList.remove("--inactive");
+        notepadSave.classList.remove("--inactive");
+        notepadExit.classList.remove("--inactive");
     }
 }
 /*----------  Variable Declaration  ----------*/
@@ -64,10 +71,13 @@ export const notepadModal = document.getElementsByClassName("notepad-modal").ite
 export let notepadExpandButton = document.getElementsByClassName("notepad-modal__expand-button").item(0);
 export let notepadCloseButton = document.querySelector(".notepad-modal__close-button");
 export let notepadEntry = document.querySelector("#notepad-note");
+export let notepadTitle = document.querySelector(".notepad-modal__title");
 
 export let notepadFileTab = document.querySelector(".notepad-modal__menu-bar-file");
 export let notepadFileMenu = document.querySelector(".notepad-modal__file-menu");
+export let notepadNew = document.querySelector(".notepad-modal__file-menu-new");
 export let notepadSave = document.querySelector(".notepad-modal__file-menu-save");
+export let notepadExit = document.querySelector(".notepad-modal__file-menu-exit");
 
 /*----------  Script assignment  ----------*/
 // notepadExpandButton.addEventListener("click", (event) => {
@@ -81,5 +91,10 @@ notepadSave.addEventListener("click", (event) => {
 notepadFileTab.addEventListener("click", (event) => {
     toggleMenu(event, notepadFileMenu);
 });
+
+notepadNew.addEventListener("click", (event) => {
+    notepadTitle.innerHTML = "Untitled - Notepad";
+    notepadEntry.value = '';
+})
 
 console.log(filesContentList);
