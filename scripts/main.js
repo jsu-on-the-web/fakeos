@@ -31,6 +31,45 @@ const calculateCurrentTime = () => {
     return currentTime;
 }
 
+const spawnTaskTab = (event, programName) => {
+    let newTab = document.createElement('div');
+    newTab.className = 'taskbar__task';
+
+    let newTabIcon = document.createElement('img');
+    newTabIcon.className = 'taskbar__task-icon';
+
+    let newTabTitle = document.createElement('span');
+    newTabTitle.className = 'taskbar__task-title';
+
+    switch (programName) {
+        case 'Documents':
+            newTabIcon.src = "../img/mydocs.ico";
+            newTabTitle.innerText = 'Documents';
+            newTab.id = 'Documents';
+            break;
+        case 'Notepad':
+            newTabIcon.src = "../img/notepad.ico";
+            newTabTitle.innerText = notepad.notepadTitle;
+            newTab.id = 'Notepad';
+            break;
+        case 'IRC':
+            newTabIcon.src = "../img/network_three_pcs.ico";
+            newTabTitle.innerText = 'Internet Relay Chat - fauxnet.net - #chat';
+            newTab.id = 'IRC';
+            break;
+        default:
+            console.error('Unknown program');
+            return;
+    }
+
+    newTab.appendChild(newTabIcon);
+    newTab.appendChild(newTabTitle);
+
+    tasksList.appendChild(newTab);
+    console.log(tasksList);
+
+}
+
 
 
 /*=============================================
@@ -49,6 +88,7 @@ let documentsModal = documents.documentsModal;
 let ircModal = irc.ircModal;
 
 let taskbar = document.querySelector('.taskbar');
+let tasksList = document.querySelector('.taskbar__task-list')
 let startMenu = document.querySelector('.taskbar__menu');
 let startButton = document.querySelector('.taskbar__start-button');
 
@@ -130,3 +170,5 @@ ircCloseButton.addEventListener("click", (event) => {
         ircModal.classList.add('irc-modal--inactive');
     }
 });
+
+spawnTaskTab(event, 'Documents');
