@@ -1,6 +1,7 @@
 /*----------  Function Declaration  ----------*/
 
 export const updateFileDisplay = () => {
+    documentsDisplayList.innerHTML = "";
     filesContentList.forEach(file => {
         // Spawn and add a file icon to the display
 

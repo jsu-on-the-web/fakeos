@@ -23,7 +23,7 @@ export const saveFile = (event) => {
         let newFile = new textFile(newFileName, notepadEntry.value);
 
         // If a file with the same name already exists, replace it with the new file
-        const matchIndex = filesContentList.findIndex(file => file.fileName === newFileName);
+        const matchIndex = filesContentList.findIndex(file => file.fileName == newFileName);
         if (matchIndex === -1) {
             filesContentList.push(newFile);
             console.log(`Added file %{newFileName}`);
