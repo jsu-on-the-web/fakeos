@@ -1,4 +1,5 @@
 import { updateFileDisplay, textFile, filesContentList } from "./documents.js";
+import { openPrograms, closeTaskTab } from "./main.js";
 
 /*----------  Function Declaration  ----------*/
 // TODO: Until the modal can resize properly, this method goes unused
@@ -107,5 +108,14 @@ notepadNew.addEventListener("click", (event) => {
     notepadEntry.value = '';
     toggleMenu(event, notepadFileMenu);
 })
+
+notepadExit.addEventListener("click", (event) => {
+    if (openPrograms.notepadOpen === true || !(notepad.notepadModal.classList.contains('notepad-modal--inactive'))) {
+        console.log("closing notepad");
+        openPrograms.notepadOpen = false;
+        notepadModal.classList.add('notepad-modal--inactive');
+        closeTaskTab(event, 'Notepad');
+    }
+});
 
 console.log(filesContentList);

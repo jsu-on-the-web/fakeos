@@ -249,11 +249,12 @@ main {
 		user-select: none;
 		pointer-events: all;
 		li {
-			@include m.clickable-option;
-
 			span {
 				margin-left: 2.5rem;
 			}
+		}
+		li:hover {
+			@include m.clickable-option;
 		}
 		.--inactive {
 			cursor: none;

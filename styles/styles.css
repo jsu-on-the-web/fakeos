@@ -264,15 +264,15 @@ main {
           user-select: none;
   pointer-events: all;
 }
-.notepad-modal__file-menu-options li {
+.notepad-modal__file-menu-options li span {
+  margin-left: 2.5rem;
+}
+.notepad-modal__file-menu-options li:hover {
   pointer-events: all;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   cursor: pointer;
-}
-.notepad-modal__file-menu-options li span {
-  margin-left: 2.5rem;
 }
 .notepad-modal__file-menu-options .--inactive {
   cursor: none;
