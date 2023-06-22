@@ -1,3 +1,5 @@
+import * as notepad from "./notepad.js";
+
 /*----------  Function Declaration  ----------*/
 
 export const updateFileDisplay = () => {
@@ -23,11 +25,28 @@ export const updateFileDisplay = () => {
         fileName.appendChild(fileNameText);
         fileToPlace.appendChild(fileName);
         documentsDisplayList.appendChild(fileToPlace);
+
+        fileToPlace.addEventListener("click", () => {
+            openFile(fileNameText.nodeValue);
+            console.log(`${fileNameText.nodeValue} opened`);
+        });
     })
 }
 
-export const openFile = (fileName) => {
+export const openFile = (requestedFileName) => {
+    let fileToOpen = filesContentList.filter(file => file.fileName === requestedFileName);
+    if (fileToOpen.length > 0) {
+        // Must be the first one!
+        let { fileName, fileContents } = fileToOpen[0];
 
+        notepad.notepadTitle.innerHTML = fileName + ' - Notepad';
+        notepad.notepadEntry.value = fileContents;
+
+        notepad.notepadModal.classList.remove('notepad-modal--inactive');
+    } else {
+        console.error("File not found!");
+        return;
+    }
 }
 
 /*----------  Variable Declaration  ----------*/
