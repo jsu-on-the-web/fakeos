@@ -1,5 +1,5 @@
 import * as notepad from "./notepad.js";
-
+import { spawnTaskTab } from "./main.js";
 /*----------  Function Declaration  ----------*/
 
 export const updateFileDisplay = () => {
@@ -44,6 +44,7 @@ export const openFile = (requestedFileName) => {
 
         notepad.notepadModal.classList.remove('notepad-modal--inactive');
         notepad.notepadFileMenu.classList.add('notepad-modal--inactive');
+        spawnTaskTab(event, 'Notepad');
     } else {
         console.error("File not found!");
         return;

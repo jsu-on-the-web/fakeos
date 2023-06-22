@@ -31,7 +31,7 @@ const calculateCurrentTime = () => {
     return currentTime;
 }
 
-const spawnTaskTab = (event, programName) => {
+export const spawnTaskTab = (event, programName) => {
     let newTab = document.createElement('div');
     newTab.className = 'taskbar__task';
 
@@ -70,7 +70,7 @@ const spawnTaskTab = (event, programName) => {
 
 }
 
-const closeTaskTab = (event, programName) => {
+export const closeTaskTab = (event, programName) => {
     try {
         tasksList.removeChild(document.querySelector(`#${programName}`));
     } catch (error) {
