@@ -24,14 +24,17 @@ export const saveFile = (event) => {
 
         // If a file with the same name already exists, replace it with the new file
         const matchIndex = filesContentList.findIndex(file => file.fileName === newFileName);
-        if (matchIndex !== -1) {
+        if (matchIndex === -1) {
             filesContentList.push(newFile);
+            console.log(`Added file %{newFileName}`);
+
         } else {
             filesContentList[matchIndex] = newFile;
+            console.log(`Overwrote file ${newFileName} at index ${matchIndex}`);
         }
     }
-
-
+    updateFileDisplay();
+    console.log(filesContentList);
 }
 
 export const fileNameEntry = (event) => {
@@ -60,5 +63,8 @@ export let notepadSave = document.querySelector(".notepad-modal__file-menu-save"
 //     toggleNotepadSize(event);
 // });
 
+notepadSave.addEventListener("click", (event) => {
+    saveFile(event);
+});
 
-
+console.log(filesContentList);
