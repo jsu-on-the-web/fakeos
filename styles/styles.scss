@@ -161,6 +161,18 @@ main {
 		font-size: 8pt;
 	}
 
+	&--option-unavailable {
+		color: darkgrey;
+		pointer-events: none;
+	}
+
+	textarea {
+		resize: none;
+		height: inherit;
+	}
+
+	/*----------  Menu  ----------*/
+
 	&__menu-bar {
 		@include m.taskbar-element;
 		display: flex;
@@ -173,8 +185,23 @@ main {
 		}
 	}
 
-	&--option-unavailable {
-		color: darkgrey;
+	&__file-menu {
+		@include m.taskbar-element;
+		position: fixed;
+		top: 22rem;
+		padding-right: 2rem;
+		width: auto;
+	}
+	&__file-menu-options {
+		list-style: none;
+		li > span {
+			margin-left: 2.5rem;
+		}
+	}
+
+	/*----------  States  ----------*/
+	&--inactive {
+		opacity: 0;
 		pointer-events: none;
 	}
 
@@ -187,17 +214,6 @@ main {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
-	}
-
-	textarea {
-		resize: none;
-		height: inherit;
-	}
-
-	/*----------  States  ----------*/
-	&--inactive {
-		opacity: 0;
-		pointer-events: none;
 	}
 }
 

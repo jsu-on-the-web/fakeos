@@ -151,6 +151,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   width: 30vw;
+  /*----------  Menu  ----------*/
   /*----------  States  ----------*/
 }
 .notepad-modal__title-bar {
@@ -173,6 +174,14 @@ main {
   border: 4px groove;
   font-size: 8pt;
 }
+.notepad-modal--option-unavailable {
+  color: darkgrey;
+  pointer-events: none;
+}
+.notepad-modal textarea {
+  resize: none;
+  height: inherit;
+}
 .notepad-modal__menu-bar {
   background-color: #c0c7c8;
   border: 4px groove;
@@ -184,8 +193,22 @@ main {
 .notepad-modal__menu-bar li {
   padding: 4px;
 }
-.notepad-modal--option-unavailable {
-  color: darkgrey;
+.notepad-modal__file-menu {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: fixed;
+  top: 22rem;
+  padding-right: 2rem;
+  width: auto;
+}
+.notepad-modal__file-menu-options {
+  list-style: none;
+}
+.notepad-modal__file-menu-options li > span {
+  margin-left: 2.5rem;
+}
+.notepad-modal--inactive {
+  opacity: 0;
   pointer-events: none;
 }
 .notepad-modal--maximized {
@@ -197,14 +220,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-.notepad-modal textarea {
-  resize: none;
-  height: inherit;
-}
-.notepad-modal--inactive {
-  opacity: 0;
-  pointer-events: none;
 }
 
 /*=============================================
