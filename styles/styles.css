@@ -292,6 +292,7 @@ main {
   background-color: white;
   min-height: 30rem;
   margin: 0.5rem;
+  overflow: auto;
   padding: 1rem;
 }
 .documents-modal__display-file-list {
