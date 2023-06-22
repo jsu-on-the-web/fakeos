@@ -136,6 +136,10 @@ main {
 			padding-right: 4rem;
 		}
 	}
+	&__menu-items div:hover {
+		background-color: c.$program-darkblue;
+		color: white;
+	}
 
 	&__shut-down {
 		border-top: groove 4px;

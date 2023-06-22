@@ -140,6 +140,10 @@ main {
   display: flex;
   padding-right: 4rem;
 }
+.taskbar__menu-items div:hover {
+  background-color: #030774;
+  color: white;
+}
 .taskbar__shut-down {
   border-top: groove 4px;
   width: -moz-max-content;
