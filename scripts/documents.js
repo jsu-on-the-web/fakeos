@@ -22,14 +22,13 @@ export const updateFileDisplay = () => {
         fileName.appendChild(fileNameText);
         fileToPlace.appendChild(fileName);
         documentsDisplayList.appendChild(fileToPlace);
-
     })
 }
 
 
 /*----------  Variable Declaration  ----------*/
 
-class file {
+export class textFile {
 
     fileName = '';
     fileContents = '';
@@ -54,7 +53,7 @@ class file {
         this.fileContents = value;
     }
 }
-let testFile = new file('test1.txt', 'This is a test file');
+let testFile = new textFile('test1.txt', 'This is a test file');
 
 export let documentsModal = document.querySelector('.documents-modal');
 export let documentsCloseButton = document.querySelector('.documents-modal__close-button');
