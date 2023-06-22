@@ -188,12 +188,14 @@ main {
 	&__file-menu {
 		@include m.taskbar-element;
 		position: fixed;
-		top: 22rem;
+		top: 21rem;
 		padding-right: 2rem;
 		width: auto;
 	}
 	&__file-menu-options {
 		list-style: none;
+		user-select: none;
+		pointer-events: all;
 		li > span {
 			margin-left: 2.5rem;
 		}
@@ -205,16 +207,16 @@ main {
 		pointer-events: none;
 	}
 
-	&--maximized {
-		background-color: #c0c7c8;
-		border: 4px groove;
-		position: relative;
-		top: -11vh;
-		height: inherit;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-	}
+	// &--maximized {
+	// 	background-color: #c0c7c8;
+	// 	border: 4px groove;
+	// 	position: relative;
+	// 	top: -11vh;
+	// 	height: inherit;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	justify-content: flex-start;
+	// }
 }
 
 /*=============================================
