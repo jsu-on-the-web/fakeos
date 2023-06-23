@@ -133,7 +133,8 @@ main {
 		margin-bottom: 0;
 		div {
 			display: flex;
-			padding-right: 4rem;
+			padding-right: 1rem;
+			align-items: center;
 		}
 	}
 	&__menu-items div:hover {
@@ -144,6 +145,10 @@ main {
 	&__shut-down {
 		border-top: groove 4px;
 		width: max-content;
+	}
+
+	&__programs-arrow {
+		margin-left: 4rem;
 	}
 
 	/*----------  Task list  ----------*/

@@ -138,7 +138,8 @@ main {
 }
 .taskbar__menu-items div {
   display: flex;
-  padding-right: 4rem;
+  padding-right: 1rem;
+  align-items: center;
 }
 .taskbar__menu-items div:hover {
   background-color: #030774;
@@ -148,6 +149,9 @@ main {
   border-top: groove 4px;
   width: -moz-max-content;
   width: max-content;
+}
+.taskbar__programs-arrow {
+  margin-left: 4rem;
 }
 .taskbar__task-list {
   display: flex;
