@@ -245,9 +245,16 @@ main {
 	&__file-menu {
 		@include m.taskbar-element;
 		position: fixed;
-		top: 21rem;
+		top: 25.5rem;
 		padding-right: 2rem;
 		width: auto;
+		opacity: 1;
+
+		&--inactive {
+			cursor: none;
+			pointer-events: none;
+			opacity: 0;
+		}
 	}
 	&__file-menu-options {
 		list-style: none;

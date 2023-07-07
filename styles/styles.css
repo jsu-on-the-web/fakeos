@@ -257,9 +257,15 @@ main {
   background-color: #c0c7c8;
   border: 4px groove;
   position: fixed;
-  top: 21rem;
+  top: 25.5rem;
   padding-right: 2rem;
   width: auto;
+  opacity: 1;
+}
+.notepad-modal__file-menu--inactive {
+  cursor: none;
+  pointer-events: none;
+  opacity: 0;
 }
 .notepad-modal__file-menu-options {
   list-style: none;

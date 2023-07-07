@@ -93,6 +93,7 @@ notepadSave.addEventListener("click", (event) => {
 
 notepadFileTab.addEventListener("click", (event) => {
     toggleMenu(event, notepadFileMenu);
+    console.log("file click");
 });
 
 notepadEntry.addEventListener("click", (event) => {
