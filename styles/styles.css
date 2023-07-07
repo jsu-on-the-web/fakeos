@@ -1,0 +1,458 @@
+/*=============================================
+=            Imports                          =
+=============================================*/
+/*=============================================
+=            Generic/Main Selectors           =
+=============================================*/
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  font-family: "MS Sans Serif", sans-serif;
+}
+
+/*=============================================
+=               Desktop Selectors             =
+=============================================*/
+.desktop {
+  background-image: url("../img/windows98-background.jpg");
+  background-size: cover;
+  height: 96vh;
+}
+.desktop__icons {
+  display: flex;
+  flex: 1 1 0px;
+  width: 0;
+}
+.desktop__icons div {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.desktop__program-icon {
+  height: 30px;
+  width: 30px;
+}
+.desktop__documents .desktop__program-icon {
+  height: 40px;
+  width: 40px;
+}
+.desktop__program-title {
+  background-color: #008081;
+}
+
+/*=============================================
+=            Taskbar Selectors                =
+=============================================*/
+.taskbar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  height: 3.4vh;
+  display: flex;
+  align-items: center;
+  font-family: "MS Sans Serif", sans-serif;
+  justify-content: space-between;
+  /*----------  Menu  ----------*/
+  /*----------  Task list  ----------*/
+  /*----------  Clock  ----------*/
+}
+.taskbar__start-button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.5rem;
+}
+.taskbar__start-button--pressed {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 0.5rem;
+  background-color: darkgrey;
+  border: 4px ridge rgb(139, 138, 138);
+}
+.taskbar__start-button-icon {
+  width: 35%;
+  height: 35%;
+}
+.taskbar__start-button-text {
+  font-weight: bold;
+}
+.taskbar__menu {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  border-right: black groove 4px;
+  border-bottom: black groove 4px;
+  position: fixed;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.taskbar__menu--inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+.taskbar__title-bar {
+  background-color: #85888f;
+  display: flex;
+  align-items: flex-end;
+  height: 23rem;
+  width: 2.3rem;
+  padding-bottom: 1rem;
+}
+.taskbar__title {
+  padding-bottom: 6rem;
+  font-size: x-large;
+  color: #c3c6cd;
+  display: flex;
+  transform: rotate(270deg);
+  font-weight: bold;
+  font-family: "Tahoma", "MS Sans Serif" sans-serif;
+}
+.taskbar__title-number {
+  color: white;
+}
+.taskbar__menu-items {
+  padding-left: 1rem;
+  margin-bottom: 0;
+}
+.taskbar__menu-items div {
+  display: flex;
+  padding-right: 1rem;
+  align-items: center;
+}
+.taskbar__menu-items div:hover {
+  background-color: #030774;
+  color: white;
+}
+.taskbar__shut-down {
+  border-top: groove 4px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.taskbar__programs-arrow {
+  margin-left: 4rem;
+}
+.taskbar__task-list {
+  display: flex;
+  flex-grow: 1;
+}
+.taskbar__task {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  align-items: center;
+  flex-basis: 8rem;
+  flex-shrink: 1;
+}
+.taskbar__task-icon {
+  width: 15%;
+  margin-left: 0.4rem;
+  margin-right: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+.taskbar__clock {
+  border: 4px ridge;
+  border-top: 2px solid #85888f;
+  border-left: 2px solid #85888f;
+  margin-right: 1rem;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.taskbar__clock-text {
+  margin: 0.4rem;
+}
+
+/*=============================================
+=            Notepad Selectors                =
+=============================================*/
+.notepad-modal {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: fixed;
+  left: 32vw;
+  top: 20vh;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30vw;
+  /*----------  Menu  ----------*/
+  /*----------  States  ----------*/
+}
+.notepad-modal__title-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  background: linear-gradient(0.25turn, #030774, #0f7ac6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+.notepad-modal__title {
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.notepad-modal__buttons button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 8pt;
+}
+.notepad-modal--option-unavailable {
+  color: darkgrey;
+  pointer-events: none;
+}
+.notepad-modal textarea {
+  resize: none;
+  height: inherit;
+  pointer-events: all;
+}
+.notepad-modal__menu-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding-left: 5px;
+}
+.notepad-modal__menu-bar li {
+  padding: 4px;
+}
+.notepad-modal__menu-bar-file {
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.notepad-modal__file-menu {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: fixed;
+  top: 21rem;
+  padding-right: 2rem;
+  width: auto;
+}
+.notepad-modal__file-menu-options {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: all;
+}
+.notepad-modal__file-menu-options li span {
+  margin-left: 2.5rem;
+}
+.notepad-modal__file-menu-options li:hover {
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.notepad-modal__file-menu-options .--inactive {
+  cursor: none;
+  pointer-events: none;
+}
+.notepad-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+}
+
+/*=============================================
+=            Document Selectors            =
+=============================================*/
+.documents-modal {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: fixed;
+  left: 12.5vw;
+  top: 20vh;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30rem;
+  /*----------  States  ----------*/
+}
+.documents-modal__title-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  background: linear-gradient(0.25turn, #030774, #0f7ac6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+.documents-modal__title {
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.documents-modal__buttons button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 8pt;
+}
+.documents-modal__display {
+  background-color: white;
+  min-height: 30rem;
+  margin: 0.5rem;
+  overflow: auto;
+  padding: 1rem;
+}
+.documents-modal__display-file-list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 2rem;
+}
+.documents-modal__file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+.documents-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*=============================================
+=            IRC Selectors            =
+=============================================*/
+.irc-modal {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  position: fixed;
+  left: 63vw;
+  top: 20vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
+  /*----------  Chat  ----------*/
+  /*----------  Member list  ----------*/
+  /*----------  States  ----------*/
+}
+.irc-modal__title-bar {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  background: linear-gradient(0.25turn, #030774, #0f7ac6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 5px;
+}
+.irc-modal__title {
+  color: white;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.irc-modal__buttons button {
+  background-color: #c0c7c8;
+  border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  font-size: 8pt;
+}
+.irc-modal__display {
+  min-height: 30rem;
+  height: inherit;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.irc-modal__chat-window {
+  display: grid;
+  grid-template-columns: 30rem 10rem;
+}
+.irc-modal__chat {
+  background-color: white;
+  margin: 0.5rem;
+  border: 4px groove;
+  height: 34rem;
+  overflow: auto;
+  list-style: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+.irc-modal__chat-author {
+  font-weight: bold;
+}
+.irc-modal__member-list-display {
+  background-color: white;
+  margin: 0.5rem;
+  border: 4px groove;
+  width: -moz-max-content;
+  width: max-content;
+}
+.irc-modal__member-list {
+  padding: 1rem;
+  padding-top: 0.2rem;
+}
+.irc-modal__member-name {
+  list-style: none;
+  font-weight: bold;
+}
+.irc-modal__chat-input {
+  width: 34.9rem;
+  border: 4px groove;
+}
+.irc-modal__chat-button {
+  border: 4px groove;
+  pointer-events: all;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.irc-modal--inactive {
+  opacity: 0;
+  pointer-events: none;
+}/*# sourceMappingURL=styles.css.map */

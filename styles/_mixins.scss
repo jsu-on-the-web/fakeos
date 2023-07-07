@@ -1,0 +1,44 @@
+@use "_colours.scss" as c;
+
+@mixin taskbar-element {
+	background-color: c.$ui-grey;
+	border: 4px groove;
+}
+
+@mixin program-title-bar {
+	@include taskbar-element;
+	background: linear-gradient(0.25turn, #030774, #0f7ac6);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-right: 5px;
+}
+
+@mixin program-title-text {
+	color: white;
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+@mixin program-subwindow {
+	background-color: white;
+	margin: 0.5rem;
+	border: 4px groove;
+}
+
+@mixin start-button {
+	@include taskbar-element;
+	width: fit-content;
+	padding: 4px 4px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 0.5rem;
+}
+
+@mixin clickable-option {
+	pointer-events: all;
+	user-select: none;
+	cursor: pointer;
+}

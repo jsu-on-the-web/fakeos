@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Windauxs 9x | Janet Suryadi</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <section class="desktop">
+            <section class="desktop__icons">
+                <div class="desktop__documents">
+                    <img class="desktop__program-icon" src="/img/mydocs.ico">
+                    <p class="desktop__program-title">Documents</p>
+                </div>
+
+                <div class="desktop__notepad">
+                    <img class="desktop__program-icon" src="/img/notepad.ico">
+                    <p class="desktop__program-title">Notepad</p>
+                </div>
+
+                <div class="desktop__irc">
+                    <img class="desktop__program-icon" src="/img/network_three_pcs.ico">
+                    <p class="desktop__program-title">IRC</p>
+                </div>
+            </section>
+
+            <!-- Modals for the programs-->
+            <section class="notepad-modal notepad-modal--inactive">
+                <div class="notepad-modal__title-bar">
+                    <p class="notepad-modal__title">Untitled - Notepad</p>
+                    <section class="notepad-modal__buttons">
+                        <button class="notepad-modal__mini-button">
+                            <i class="fa fas fa-window-minimize"></i>
+                        </button>
+                        <button class="notepad-modal__expand-button"><i class="fa fa-window-maximize"></i></button>
+                        <button class="notepad-modal__close-button ">X</button>
+                    </section>
+                </div>
+                <ul class="notepad-modal__menu-bar">
+                    <li class="notepad-modal__menu-bar-file">File</li>
+                    <li class="notepad-modal__menu-bar-edit notepad-modal--option-unavailable">Edit</li>
+                    <li class="notepad-modal__menu-bar-search notepad-modal--option-unavailable">Search</li>
+                    <li class="notepad-modal__menu-bar-help">Help</li>
+                </ul>
+
+                <section class="notepad-modal__file-menu notepad-modal--inactive">
+                    <ul class="notepad-modal__file-menu-options">
+                        <li class="notepad-modal__file-menu-option notepad-modal__file-menu-new">New <span
+                                class="notepad-modal--option-unavailable">&nbsp; Ctrl + N</span></li>
+                        <li class="notepad-modal__file-menu-option notepad-modal--option-unavailable --inactive">Open
+                            <span>&nbsp;
+                                Ctrl + O</span>
+                        </li>
+                        <li class="notepad-modal__file-menu-option notepad-modal__file-menu-save --inactive">Save
+                            <span>&nbsp; Ctrl
+                                + S</span>
+                        </li>
+                        <li class="notepad-modal__file-menu-option notepad-modal__file-menu-exit">Exit</li>
+                    </ul>
+                </section>
+                <textarea name="note" id="notepad-note" cols="50" rows="10"></textarea>
+            </section>
+
+            <section class="documents-modal documents-modal--inactive">
+                <div class="documents-modal__title-bar">
+                    <p class="documents-modal__title">Documents</p>
+                    <section class="documents-modal__buttons">
+                        <button class="documents-modal__mini-button">
+                            <i class="fa fas fa-window-minimize"></i>
+                        </button>
+                        <button class="documents-modal__expand-button"><i class="fa fa-window-maximize"></i></button>
+                        <button class="documents-modal__close-button ">X</button>
+                    </section>
+                </div>
+                <!-- <ul class="documents-modal__menu-bar">
+                    <li class="documents-modal__menu-bar-file">File</li>
+                    <li class="documents-modal__menu-bar-edit documents-modal--option-unavailable">Edit</li>
+                    <li class="documents-modal__menu-bar-search documents-modal--option-unavailable">Search</li>
+                    <li class="documents-modal__menu-bar-help">Help</li>
+                </ul> -->
+                <section class="documents-modal__display">
+                    <section class="documents-modal__display-file-list">
+                        <div class="documents-modal__file">
+                            <img class="documents-modal__icon" src="/img/message_file.ico">
+                            <p class="documents-modal__file-name">dummy.txt</p>
+                        </div>
+                    </section>
+                </section>
+
+            </section>
+            <section class="irc-modal irc-modal--inactive">
+                <div class="irc-modal__title-bar">
+                    <p class="irc-modal__title">Internet Relay Chat - fauxnet.net - #chat</p>
+                    <section class="irc-modal__buttons">
+                        <button class="irc-modal__mini-button">
+                            <i class="fa fas fa-window-minimize"></i>
+                        </button>
+                        <button class="irc-modal__expand-button"><i class="fa fa-window-maximize"></i></button>
+                        <button class="irc-modal__close-button ">X</button>
+                    </section>
+                </div>
+                <section class="irc-modal__display">
+                    <div class="irc-modal__chat-window">
+                        <ul class="irc-modal__chat">
+                            <li class="irc-modal__chat-message"><span class="irc-modal__chat-author">[SYSTEM]</span>
+                                Welcome to #chat, windauxs95!</li>
+                        </ul>
+                        <div class="irc-modal__member-list-display">
+                            <ul class="irc-modal__member-list">
+                                <li class="irc-modal__member-name"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <form action="" class="irc-modal__chat-form">
+                        <input type="text" class="irc-modal__chat-input">
+                        <button type="submit" class="irc-modal__chat-button" onsubmit="return false">Send</button>
+                    </form>
+                </section>
+            </section>
+        </section>
+        </section>
+
+
+
+        <section class="taskbar">
+            <button class="taskbar__start-button">
+                <img class="taskbar__start-button-icon" src="/img/windows.ico">
+                <span class="taskbar__start-button-text">Start</span>
+            </button>
+            <section class="taskbar__menu taskbar__menu--inactive">
+                <div class="taskbar__title-bar">
+                    <p class="taskbar__title">Windauxs <span class="taskbar__title-number">9X</span></p>
+                </div>
+                <section class="taskbar__menu-items">
+                    <div class="taskbar__programs"><img class="taskbar__programs-icon" src="./img/programs-dir.ico">
+                        <p class="taskbar__programs-title"><u>P</u>rograms</p>
+                        <i class="taskbar__programs-arrow fas fa-caret-right"></i>
+                    </div>
+                    <div class="taskbar__documents"><img class="taskbar__documents-icon" src="./img/mydocs.ico">
+                        <p class="taskbar__programs-title"><u>D</u>ocuments</p>
+                        <i class="taskbar__programs-arrow fas fa-caret-right"></i>
+                    </div>
+                    <div class="taskbar__settings"><img class="taskbar__settings-icon" src="./img/settings.ico">
+                        <p class="taskbar__settings-title"><u>S</u>ettings</p>
+                    </div>
+                    <div class="taskbar__find"><img class="taskbar__find-icon" src="./img/search_file.ico">
+                        <p class="taskbar__programs-title"><u>F</u>ind</p>
+                    </div>
+                    <div class="taskbar__help"><img class="taskbar__help-icon" src="./img/help.ico">
+                        <p class="taskbar__programs-title"><u>H</u>elp</p>
+                    </div>
+                    <div class="taskbar__run"><img class="taskbar__run-icon" src="./img/run.ico">
+                        <p class="taskbar__programs-title"><u>R</u>un</p>
+                    </div>
+                    <div class="taskbar__shut-down"><img class="taskbar__shut-down-icon" src="./img/shutdown.ico">
+                        <p class="taskbar__programs-title">Sh<u>u</u>t Down</p>
+                    </div>
+                </section>
+
+            </section>
+            <section class="taskbar__task-list">
+
+            </section>
+            <div class="taskbar__clock">
+                <p class="taskbar__clock-text"></p>
+            </div>
+
+        </section>
+    </main>
+</body>
+<script src="https://kit.fontawesome.com/d3ac8f356b.js" crossorigin="anonymous"></script>
+<!-- <script src="scripts/notepad.js" type="module"></script>
+<script src="scripts/documents.js" type="module"></script>
+<script src="scripts/irc.js" type="module"></script> -->
+<script defer src="scripts/main.js" type="module"></script>
+
+</html>
+
+<!--
+    Template for a desktop icon
+
+    <div class="desktop__notepad">
+        <img class="desktop__notepad-icon" src="">
+        <p class="desktop__notepad-title">Notepad</p>
+    </div>
+
+-->
+
+<!-- 
+    Template for task tab
+    
+    <div class="taskbar__task">
+        <img src="./img/notepad.ico" alt="" class="taskbar__task-icon">
+        <span class="taskbar__task-title">Test</span>
+    </div>
+ -->
